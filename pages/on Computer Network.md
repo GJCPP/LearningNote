@@ -250,5 +250,92 @@ public:: true
 		- reliable data transfer
 		- flow control
 		- congestion control
-		- provide logical communication for upper layer; works on end systems
--
+		- provide logical communication between processes
+			- applications -> processes -> hosts -> neighbors -> links
+	- The "packet" in this layer is called segment (段)
+	- Multiplexing, demultiplexing
+		- All messages sent/received by all processes are delivered by a same program working at transport layer
+		- TCP
+			- uses (source IP, source port, target IP, target port) value to direct messages to appropriate process
+			- Demultiplexing uses (IP, port number).
+		- UDP
+			- uses (IP, port) to direct messages
+			- Demultiplexing uses port number only.
+	- UDP - User Datagram Protocol
+		- common in streaming video, DNS, SNMP(Simple Network Management Protocol), HTTP3(QUIC)
+		- UDP segment
+		  collapsed:: true
+			- ![image.png](../assets/image_1675949892727_0.png)
+		- Checksum
+			- 1. cut payload into 16-bit integers
+			- 2. one by one, add them up
+			- 3. when the addition overflows, add the $1$ (that overflows) to the end of the result
+			- 4. lastly, flip all bits
+			- Examples: (consider a 4-bit version)
+				- sum = $0110+1010+1101 = 0001+1101 = 1110$
+				- checksum = 0001
+			- To check: the receiver adds the sum of payload to the checksum, the result should be zero.
+		- Pluses
+			- no hand-shaking (which takes a RTT)
+			- can function when network service is compromised
+			- helps with reliability (checksum)
+		- Reliable Data Transfer (RDT)
+			- (here are some versions of some stupid and naive protocols which dare try to imitate our glorious TCP)
+			- RDT 1.0
+				- no bit error, no loss of segment
+				- ![image.png](../assets/image_1675950880258_0.png)
+			- RDT 2.0
+				- with bit error, no loss of segment
+				- ![image.png](../assets/image_1675957386483_0.png)
+				- Sender sends and wait for ACK with correct sequence number.
+			- RDT 3.0
+				- with bit error, loss of segment
+				- Add "time-out" feature.
+			- Pipelining
+				- to allow multiple in-flight, but yet-to-be-acknowledged packets
+				- Go-Back-N
+					- ![image.png](../assets/image_1675957905480_0.png)
+					- Sender consecutively transmit unACKed packets.
+					- Receiver **discards** packets that arrive out of order, and sends the lastly accepted packets' sequence number.
+					- Sender ignore duplicated ACK.
+					- When the oldest in-flight packet times-out, sender **resend all packets in the window** (back N)
+					- Example
+					  collapsed:: true
+						- ![image.png](../assets/image_1675958167680_0.png)
+				- Selective Repeat
+					- ![image.png](../assets/image_1675958192288_0.png)
+					- Sender
+						- Sender consecutively transmit unACKed packets.
+						- Sender's window is continuous, and moves when its left edge are not blocked.
+						- **Each packet a timer: when it times-out, resend only that packet and restart timer.**
+					- Receiver
+						- Receiver also has a receiving window.
+						- The window moves when the lowest packet inside is obtained (just received or already in buffer).
+						- Let receiving window be [recvBase, recvBase+N-1]
+						- **For packet in [recvBase-N, recvBase+N-1], receiver shall send ACK.**
+						- or packet in [recvBase, recvBase+N-1], receiver shall buffer.
+						- Otherwise, it ignores.
+					- Examples
+					  collapsed:: true
+						- ![image.png](../assets/image_1675959054216_0.png)
+						- No retransmission for 3,4,5: they haven't timed-out yet. (NOT because sender has received their ACKs)
+				- Minimum sequence number space for two schemes
+					- Assuming that packets always arrive in order. (otherwise the answer will be $\infty$)
+					- Go-Back-N: $N+1$
+					  collapsed:: true
+						- Firstly, $N$ is not safe.
+						- Consider $N+1$. The receiver is always expecting exactly one next packet (e.g. $x$): can it be a wrong packet?
+						- Note that only if sender receives previous $x-N, x-N+1, ..., x-1$ ACKs, will it send that expected packet.
+						- If sender receives that $N$ ACKs, it sends exactly that correct packet; otherwise it will never (as constrained by window size) be able to send $x$.
+						- If it cannot send $x$, since $x-N, ..., x-1$ have arrived, there is no in-flight $x$.
+						- Thus, the receiver is always expecting the correct packets, and receiving that correct one.
+					- Selective Repeat: $2N$
+					  collapsed:: true
+						- Consider the worst case.
+						- The sender sends $1, ..., N$, and receiver receives them all.
+						- Yet the receiver's ACKs are all lost, somehow.
+						- In this condition, the sending window and receiving window are at largest distance.
+						- The receiver is expecting $N+1, ..., 2N$ now.
+						- The sender decides again to send $1, ..., N$. So we must keep $1$ out of receiving window.
+						- Which means that the sequence number must be able to hold $2N$, instead of  wrapping it to $1$.
+						- So $2N$ be.
