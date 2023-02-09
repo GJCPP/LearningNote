@@ -1,0 +1,254 @@
+public:: true
+
+- A note for preparing final exam.
+- Chapter 1: Introduction
+  collapsed:: true
+	- access network
+		- the network that physically connects an end system to the first router ("edge router") on a path from the end system to any other "distant" end system
+		- The word "distant" is very vague, which suggests that this notation is more a conceptual one rather than a technical one.
+	- link transmission rate
+		- a.k.a. link bandwidth / link capacity
+	- guided media / unguided media
+	- switching
+		- packet-switching
+			- store and forward: each packet must fully arrive at the router before it is forwarded
+		- circuit-switching
+			- Multiplexing (FDM / TDM)
+				- Frequency Division Multiplexing (FDM)
+				  collapsed:: true
+					- Each call allocated a narrowed band
+					- ![image.png](../assets/image_1675693413774_0.png)
+				- Time Division Multiplexing (TDM)
+				  collapsed:: true
+					- Each call allocated a periodic time slot
+					- ![image.png](../assets/image_1675693427170_0.png)
+			- Advantage
+				- no loss of packets
+				- no queuing delay
+				- reliable data transfer
+	- "network of networks"
+		- Figure
+		  collapsed:: true
+			- ![image.png](../assets/image_1675693815531_0.png)
+		- IXP (Internet Exchange Point)
+			- If two region ISPs are physically close, they might (after negotiation) build a IXP instead of flowing through tier-1 ISP.
+		- regional ISP may connect access networks to tier-1 ISPs (Zhejiang Telecom -> China Telecom)
+		- content provider networks: private network that connects its data centers to Internet, often bypassing tier-1, regional ISPs.
+	- Network delay
+		- $d = d_{proc} + d_{queue} + d_{tran} + d_{prop}$
+		  collapsed:: true
+			- processing delay + queuing delay + transmission delay + propagation delay
+			- $d_{tran} = \text{packet length (bits) } / \text{ link transmission rate (bps)}$
+			- $d_{prop} = \text{physical distance (meters) } / \text{ propagation speed (m/s)}$
+		- Traffic intensity
+			- $\text{arrival rate of bits } / \text{ transmission rate}$
+			- close to 1: queuing delay large
+	- Throughput
+		- rate of which bits are being sent
+		- instantaneous throughput / average throughput
+		- bottleneck link
+		  collapsed:: true
+			- link on an end-end path that constrains end-end throughput
+			-
+	- Security
+		- Authentication
+		- Confidentiality
+		- Integrity checks
+		- Access restriction
+		- Firewalls
+	- Five-layer model
+		- Application Layer
+			- responsible for applications' communications
+			- more concerned about semantic thing
+			- examples: HTTP, IMAP, STP, DNS
+		- Transport Layer
+			- responsible for processes' communications
+			- examples: TCP, UDP
+		- Network Layer
+			- responsible for routing, and send message host-to-host
+			- the layer where router works
+			- examples: IP, routing protocol
+		- Link Layer
+			- responsible for transmission between a link
+			- the layer where switcher works
+			- IP unavailable; MAC for addressing
+			- examples: Ethernet, 802.11 (Wi-Fi), PPP
+		- Physical Layer
+			- physically encoding / decoding
+- Chapter 2: Application Layer Overview
+  collapsed:: true
+	- Architecture for application
+		- Client-server architecture
+			- server
+				- an always-on host
+				- with fixed IP address (for client to find)
+				- usually in datacenter
+			- client
+				- interact with server
+				- connect (and then disconnect) from time to time
+				- may have dynamic IP address
+				- not connected to other clients directly
+			- examples: HTTP, IMAP (Internet Message Access Protocol), FTP
+		- Peer-to-peer Architecture
+			- no always-on server
+			- hosts connect to each other directly
+			- peer gets service from other peer, and also provides service
+	- Process communication
+		- client process: the one that initiates the communication
+		- identifier: IP address + port number
+		- "port" is conceptual: you can NOT find it in hardware
+	- What does an application layer protocol define
+		- 1. types of messages exchanged
+			- e.g. request, response
+		- 2. message syntax
+			- the structure of a message
+		- 3. message semantics
+		- 4. rules
+	- What transport service may an app need
+		- Reliable data transfer
+			- e.g. FTP needs 100% accuracy, while some real-time audio apps tolerates loss
+		- Timing
+			- e.g. telephony, interactive game
+		- Throughput
+			- e.g. multi-media
+		- Security
+	- HTTP
+		- HTTP response time (per object)
+			- 1 RTT for initiate TCP connection
+			- 1 RTT for request / transmitting back (i.e. some network delays)
+			- Extra time for transmitting objects
+			- Round Trip Time (RTT): time for a small packet to travel from client to server and back
+		- non-persistent HTTP
+			- each TCP connection is closed after one object is transmitted
+			- requires 2 RTT per object
+		- persistent HTTP
+			- TCP connection is maintained until the client has no more object to request for
+		- stateless: server do not record the state / requests of clients
+		- Cookies
+			- If the server is willing to record your browse state, it can assign a unique ID to you (Cookies)
+			- The server records your info into database.
+			- You can attach Cookies to your request, so the server knows your browse state.
+		- HTTP response status code
+			- ![image.png](../assets/image_1675778112825_0.png)
+		- Web caches (aka proxy servers)
+			- works both as client and server
+			- Why web caching
+				- reduce responding time
+				- reduce network traffic
+			- use condition GET: "If modified since ..."
+				- get "304 not modified" if not modified
+				- otherwise get a a new web page
+			- Hit rate: the fraction of requests served by cache
+	- E-mail
+		- SMTP is used to deliver email from user's agent to mail server, and from mail server to another mail server
+		- POP3 / IMAP is used to download email from mail server.
+	- Domain name system (DNS)
+		- to translate a domain name to its IP address
+		- runs in application layer
+		- Service
+			- alias name
+				- beside canonical domain name, a service may have some alias names
+			- load balance
+				- several IP address correspond to a same domain name
+				- thus, requests can be allocated to many server
+		- Structure
+			- ![image.png](../assets/image_1675784137544_0.png)
+				- There are 13 logical root servers, with many copies.
+			- Client first asks root DNS server for .com DNS server
+			- Then ask .com DNS server for yahoo.com DNS server
+			- Authoritative server can be maintained by organization/service provider, and returns target IP
+		- Local DNS server
+			- caches some name-to-IP pairs
+			- helps local hosts to send request for DNS service
+			- do NOT belong to the 3-level hierarchy
+			- Iterated query
+			  collapsed:: true
+				- ![image.png](../assets/image_1675784672893_0.png)
+			- Recursive query
+			  collapsed:: true
+				- ![image.png](../assets/image_1675784714085_0.png)
+				- Not realistic
+				- Can be required by setting flag bit (but usually refused by server in 3-level hierarchy)
+		- DNS record
+			- distributed database storing resource records (RR)
+			- RR format: (name, value, type, ttl)
+			- type = A
+				- name is hostname
+				- value is IP address
+			- type = NS
+				- name is domain (e.g., foo.com)
+				- value is hostname of the authoritative name server for this domain
+			- type = CNAME
+				- name is a alias name for some canonical names
+				- value is its canonical name
+			- type = MX
+				- name is a mail service's name
+				- value is the SMTP mail server associated with that name
+	- Client-server vs P2P
+		- consider distribute a file of size $F$ in a network
+		- client-server
+			- $D_{cs} \geq \max \{NF/u_s, F/d_i\}$
+			- $NF/u_s$ is the time for the server to transmit all files copies
+			- $F/d_i$ is the time for each user to download
+			- grow linearly w.r.t $N$
+		- P2P
+			- $D_{P2P} \geq \max\{F/u_s, F/d_{min}, NF/(u_s + \sum u_i)\}$
+			- $F/u_s$ is the time for the source to upload the file
+			- $F/d_{min}$ is the time for the slowest peer to download
+			- $NF/(u_s + \sum u_i)$ because the file must be uploaded for at least $N$ times
+		- ![image.png](../assets/image_1675850385925_0.png)
+	- BitTorrent
+		- file divided into 256KB chunks
+		- Requesting chunks
+			- periodically, a peer asks each peers for list of chunks that they have
+			- it requires the missing chunks from other peers, rarest first
+		- Sending chunks
+			- peer sends chunks to those 4 peers that are current sending at highest speed to it
+				- other peers are choked by it: will not receive any chunks from it
+			- re-evaluate top-4 peers every 10sec
+			- every 30sec, it randomly chooses a peer and sends chunks
+				- so new comers would have chunk to send, and then may become some peers' top-4 peer
+	- Video streaming and CDNs
+		- Coding
+			- spatial redundancy: within one image, nearby pixels are close in color to each other
+			- temporal redundancy: between one frame and next
+			- CBR: constant bit rate
+			- VBR: variable bit rate; video encoding depends on the spatial and temporal redundancy
+		- Challenges
+			- huge number of users
+			- the server-to-client bandwidth varies over time
+			- packet may loss, or arrive in wrong order
+			- client-interactivity: pause, fast-forward, rewind, jump
+		- DASH: Dynamic Adaptive Streaming over HTTP
+			- server:
+				- divides video file into multiple chunks
+				- each chunk encoded at multiple different rates
+				- different rate encodings stored in different files
+				- files replicated in various CDN nodes
+				- manifest file: provides URLs for different chunks
+					- manifest file contains several servers that are close to the client
+			- client:
+				- periodically estimates server-to-client bandwidth
+				- consulting manifest, requests one chunk at a time
+				- chooses maximum coding rate sustainable given current bandwidth
+				- can choose different coding rates at different points in time (depending on available bandwidth at time), and from different servers
+			- client decides
+				- when to send a chunk
+				- what the encoding rate should be
+				- where to request a chunk
+			- Streaming video = encoding + DASH + playout buffering
+		- CDN: Content Distribution Networks
+			- use several servers located at geographically different locations
+			- enter deep: push CND server deep *into* many access networks
+			- bring home: put a few server close to access network
+			- authoritative DNS returns CNAME with another authoritative DNS, who actually is in charge of storing and delivering the content
+			- ![image.png](../assets/image_1675862722090_0.png)
+			-
+- Chapter 3: Transport Layer Overview
+	- Targets
+		- multiplexing, demultiplexing
+		- reliable data transfer
+		- flow control
+		- congestion control
+		- provide logical communication for upper layer; works on end systems
+-
