@@ -1,4 +1,4 @@
-public:: false
+public:: true
 
 - This is homepage for my learning note.
 - You might be interested in:
