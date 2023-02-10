@@ -377,7 +377,7 @@ public:: true
 			- TCP uses Go-Back-No or Selective Repeat
 			- It depends on the two sides of the connection.
 			- If Selective Acknowledgement (SACK) is enabled/implemented.
-		- Examples
+		- Examples on sending segments
 		  collapsed:: true
 			- ![image.png](../assets/image_1676011493650_0.png)
 			-
@@ -385,6 +385,27 @@ public:: true
 			- The receiver tells the sender current size of free buffer
 				- ![image.png](../assets/image_1676012244894_0.png){:height 167, :width 188}
 			- The sender makes sure the in-flight data never overflows $rwnd$
-			- in-flight = \#bytes sent - \#ACK received
-			-
-			-
+			- $inflight = LastBytesSent - LastByteAcked$
+			- For sender: $LastByteSent - LastByteAcked \leq rwnd$
+		- 3-way handshake
+			- 1: Client -> Server
+			- 2: Server -> Client (Client side established)
+			- 3: Client -> Server (Server side established)
+			- In the third time, the client can send message directly.
+			- So in total it takes exactly $1$ RTT to establish connection.
+			- What is establishment: to allocate system resource for the connection.
+			- 2-way handshake vs 3-way handshake
+			  collapsed:: true
+				- ![image.png](../assets/image_1676018626291_0.png)
+		- 4-way handshave
+			- ![image.png](../assets/image_1676018993546_0.png){:height 271, :width 469}
+			- The client waits for extra time to ensure that the server receives the FIN, so the server can free its resource as soon as possible.
+		- Congestion control
+			- basically two ways: end-end or network-assisted
+			- [[TCP congestion control]]
+			- Formula for throughput of TCP Reno
+				- TCP throughput = $\frac{1.22\text{MSS}}{\text{RTT}\sqrt{L}}$
+				- where $L$ is the rate for packet loss
+		- TCP fairness
+			- Fairness: if there are $T$ connections over a  link with bandwidth $R$, then each connection should share a bandwidth of $R/T$.
+			- ![image.png](../assets/image_1676026642279_0.png)
