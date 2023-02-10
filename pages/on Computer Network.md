@@ -279,63 +279,112 @@ public:: true
 			- no hand-shaking (which takes a RTT)
 			- can function when network service is compromised
 			- helps with reliability (checksum)
-		- Reliable Data Transfer (RDT)
-			- (here are some versions of some stupid and naive protocols which dare try to imitate our glorious TCP)
-			- RDT 1.0
-				- no bit error, no loss of segment
-				- ![image.png](../assets/image_1675950880258_0.png)
-			- RDT 2.0
-				- with bit error, no loss of segment
-				- ![image.png](../assets/image_1675957386483_0.png)
-				- Sender sends and wait for ACK with correct sequence number.
-			- RDT 3.0
-				- with bit error, loss of segment
-				- Add "time-out" feature.
-			- Pipelining
-				- to allow multiple in-flight, but yet-to-be-acknowledged packets
-				- Go-Back-N
-					- ![image.png](../assets/image_1675957905480_0.png)
+	- Reliable Data Transfer (RDT)
+		- (here are versions of some stupid and naive protocols which dare try to imitate our glorious TCP with contemptible UDP)
+		- RDT 1.0
+		  collapsed:: true
+			- no bit error, no loss of segment
+			- ![image.png](../assets/image_1675950880258_0.png)
+		- RDT 2.0
+		  collapsed:: true
+			- with bit error, no loss of segment
+			- ![image.png](../assets/image_1675957386483_0.png)
+			- Sender sends and wait for ACK with correct sequence number.
+		- RDT 3.0
+		  collapsed:: true
+			- with bit error, loss of segment
+			- Add "time-out" feature.
+		- Pipelining
+		  collapsed:: true
+			- to allow multiple in-flight, but yet-to-be-acknowledged packets
+			- Go-Back-N
+			  collapsed:: true
+				- ![image.png](../assets/image_1675957905480_0.png)
+				- Sender consecutively transmit unACKed packets.
+				- Receiver **discards** packets that arrive out of order, and sends the lastly accepted packet's sequence number.
+				- Sender ignore duplicated ACK.
+				- When the oldest in-flight packet times-out, sender **resend all packets in the window** (back N)
+				- Example
+				  collapsed:: true
+					- ![image.png](../assets/image_1675958167680_0.png)
+			- Selective Repeat
+			  collapsed:: true
+				- ![image.png](../assets/image_1675958192288_0.png)
+				- Sender
+				  collapsed:: true
 					- Sender consecutively transmit unACKed packets.
-					- Receiver **discards** packets that arrive out of order, and sends the lastly accepted packets' sequence number.
-					- Sender ignore duplicated ACK.
-					- When the oldest in-flight packet times-out, sender **resend all packets in the window** (back N)
-					- Example
-					  collapsed:: true
-						- ![image.png](../assets/image_1675958167680_0.png)
-				- Selective Repeat
-					- ![image.png](../assets/image_1675958192288_0.png)
-					- Sender
-						- Sender consecutively transmit unACKed packets.
-						- Sender's window is continuous, and moves when its left edge are not blocked.
-						- **Each packet a timer: when it times-out, resend only that packet and restart timer.**
-					- Receiver
-						- Receiver also has a receiving window.
-						- The window moves when the lowest packet inside is obtained (just received or already in buffer).
-						- Let receiving window be [recvBase, recvBase+N-1]
-						- **For packet in [recvBase-N, recvBase+N-1], receiver shall send ACK.**
-						- or packet in [recvBase, recvBase+N-1], receiver shall buffer.
-						- Otherwise, it ignores.
-					- Examples
-					  collapsed:: true
-						- ![image.png](../assets/image_1675959054216_0.png)
-						- No retransmission for 3,4,5: they haven't timed-out yet. (NOT because sender has received their ACKs)
-				- Minimum sequence number space for two schemes
-					- Assuming that packets always arrive in order. (otherwise the answer will be $\infty$)
-					- Go-Back-N: $N+1$
-					  collapsed:: true
-						- Firstly, $N$ is not safe.
-						- Consider $N+1$. The receiver is always expecting exactly one next packet (e.g. $x$): can it be a wrong packet?
-						- Note that only if sender receives previous $x-N, x-N+1, ..., x-1$ ACKs, will it send that expected packet.
-						- If sender receives that $N$ ACKs, it sends exactly that correct packet; otherwise it will never (as constrained by window size) be able to send $x$.
-						- If it cannot send $x$, since $x-N, ..., x-1$ have arrived, there is no in-flight $x$.
-						- Thus, the receiver is always expecting the correct packets, and receiving that correct one.
-					- Selective Repeat: $2N$
-					  collapsed:: true
-						- Consider the worst case.
-						- The sender sends $1, ..., N$, and receiver receives them all.
-						- Yet the receiver's ACKs are all lost, somehow.
-						- In this condition, the sending window and receiving window are at largest distance.
-						- The receiver is expecting $N+1, ..., 2N$ now.
-						- The sender decides again to send $1, ..., N$. So we must keep $1$ out of receiving window.
-						- Which means that the sequence number must be able to hold $2N$, instead of  wrapping it to $1$.
-						- So $2N$ be.
+					- Sender's window is continuous, and moves when its left edge are not blocked.
+					- **Each packet a timer: when it times-out, resend only that packet and restart timer.**
+				- Receiver
+				  collapsed:: true
+					- Receiver also has a receiving window.
+					- The window moves when the lowest packet inside is obtained (just received or already in buffer).
+					- Let receiving window be [recvBase, recvBase+N-1]
+					- **For packet in [recvBase-N, recvBase+N-1], receiver shall send ACK.**
+					- or packet in [recvBase, recvBase+N-1], receiver shall buffer.
+					- Otherwise, it ignores.
+				- Examples
+				  collapsed:: true
+					- ![image.png](../assets/image_1675959054216_0.png)
+					- No retransmission for 3,4,5: they haven't timed-out yet. (NOT because sender has received their ACKs)
+			- Minimum sequence number space for two schemes
+			  collapsed:: true
+				- Assuming that packets always arrive in order. (otherwise the answer will be $\infty$)
+				- Go-Back-N: $N+1$
+				  collapsed:: true
+					- Firstly, $N$ is not safe.
+					- Consider $N+1$. The receiver is always expecting exactly one next packet (e.g. $x$): can it be a wrong packet?
+					- Note that only if sender receives previous $x-N$ ACK, will it send that expected packet.
+					- If sender receives $x-N$ ACK, it sends exactly that correct packet; otherwise it will never (as constrained by window size) be able to send $x$ (when it resends some packets).
+					- If it cannot send $x$, since $x-N, ..., x-1$ have arrived, there is no in-flight $x$.
+					- Thus, the receiver is always expecting the correct packets, and receiving that correct one.
+				- Selective Repeat: $2N$
+				  collapsed:: true
+					- Consider the worst case.
+					- The sender sends $1, ..., N$, and receiver receives them all.
+					- Yet the receiver's ACKs are all lost, somehow.
+					- In this condition, the sending window and receiving window are at largest distance.
+					- The receiver is expecting $N+1, ..., 2N$ now.
+					- The sender decides again to send $1, ..., N$. So we must keep $1$ out of receiving window.
+					- Which means that the sequence number must be able to hold $2N$, instead of  wrapping it to $1$.
+					- So $2N$ be.
+	- TCP
+		- Segment structure
+			- ![image.png](../assets/image_1676010044841_0.png)
+			-
+			- Note that both TCP and UDP segment contains NOT IP information, for that they will be encapsulated into IP datagram which contains IP.
+			- Sequence number here is number of next first **byte**. Remember that RDT uses the number of packet.
+			- ACK number is the **next expected seq number**
+			- (I have to say the RDT things simply makes all concepts a mass)
+		- Time-out
+			- (about how to set time-out value)
+			- SampledRTT: measured time from sending the segment to receiving its ACK. (ignore retransmission)
+			- EstimatedRTT = $(1-\alpha)$ EstimatedRTT + $\alpha$ SampledRTT
+				- Typically $\alpha = 0.125$
+			- DevRTT = $(1-\beta)$ DevRTT  + $\beta$|SampleRTT-EstimatedRTT|
+				- EWMA (Exponentially weighted moving average)
+				- EWMA of SampledRTT deviation from EstimatedRTT
+				- Typically $\beta = 0.25$
+			- TimeoutInterval = EstimatedRTT + $4*$DevRtt
+			- (Some stupid formulas that are probably just experiential)
+		- Fast retransmit
+			- On receiving three additional ACK seq number: retransmit the packet containing that byte immediately.
+			- That is, "receiving the same ACK for four times" in total.
+			- Examples
+			  collapsed:: true
+				- ![image.png](../assets/image_1676011755340_0.png)
+		- Retransmit behavior
+			- TCP uses Go-Back-No or Selective Repeat
+			- It depends on the two sides of the connection.
+			- If Selective Acknowledgement (SACK) is enabled/implemented.
+		- Examples
+		  collapsed:: true
+			- ![image.png](../assets/image_1676011493650_0.png)
+			-
+		- Flow control
+			- The receiver tells the sender current size of free buffer
+				- ![image.png](../assets/image_1676012244894_0.png){:height 167, :width 188}
+			- The sender makes sure the in-flight data never overflows $rwnd$
+			- in-flight = \#bytes sent - \#ACK received
+			-
+			-
