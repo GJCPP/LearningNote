@@ -245,6 +245,7 @@ public:: true
 			- ![image.png](../assets/image_1675862722090_0.png)
 			-
 - Chapter 3: Transport Layer Overview
+  collapsed:: true
 	- Targets
 		- multiplexing, demultiplexing
 		- reliable data transfer
@@ -409,3 +410,104 @@ public:: true
 		- TCP fairness
 			- Fairness: if there are $T$ connections over a  link with bandwidth $R$, then each connection should share a bandwidth of $R/T$.
 			- ![image.png](../assets/image_1676026642279_0.png)
+- Chapter 4: Network Layer - Data Plane
+	- Network layer functions
+		- 1. **forwarding**: move packets from a router’s input link to appropriate router output link
+		  2. **routing:** determine route taken by packets from source to destination
+		- Data plane: forward packet according to forwarding table
+		- Control plane: help router to build forwarding table
+	- router
+		- Responsibility
+			- Examines fields of all IP datagram passing through it.
+			- Moves datagram from input port to output port to transfer datagram along end-end path.
+		- High-level architecture
+			- ![image.png](../assets/image_1676117273900_0.png)
+			- Control plane (upper part)
+				- Realized via software, for flexibility.
+				- Responsible for running routing algorithm.
+				- Download forwarding table. (in SDN, software-defined networking)
+			- Data plane (lower part)
+				- Realized via hardware, for efficiency.
+				- Forward packet as instructed by forwarding table.
+			- Input port
+				- ![image.png](../assets/image_1676117528853_0.png)
+				- The structure of output port is approximately its reverse.
+				- Destination-based forwarding: consider only target IP address
+				- Generalized forwarding: may consider any header field values
+		- Forwarding table
+			- ![image.png](../assets/image_1676117710622_0.png)
+			- Use **longest prefix matching**.
+			- Often performed using ternary content addressable memories (TCAMs, 三重内容寻址内存), which simultaneously matches input to all expression: 0 / 1 / not care.
+		- Switching fabric
+			- ![image.png](../assets/image_1676118070255_0.png)
+			- Moves datagram from input port to output port.
+			- Via memory: often too slow.
+			  collapsed:: true
+				- speed limited by memory bandwidth (a system bus is in charge of moving datagram from input port -> memory -> output port)
+				- ![image.png](../assets/image_1676118299116_0.png)
+			- Via bus: can move one datagram from input port to output port at same time.
+			- Via interconnection network: as long as the input/output port do not coincide, the datagrams can be transmitted simultaneously.
+		- Input port queuing
+			- Packet from all input ports are coming at rate higher faster than fabric switching
+			- Head-of-the-line(HOL) blocking: output port is occupied by other packet, so some packets have to wait.
+		- Output port queuing
+			- ![image.png](../assets/image_1676119018684_0.png)
+			- Buffer needed when packet from switch fabric arriving faster than link transmission rate.
+		- How much buffering?
+			- Too much buffer would increase delay, since TCP literally tries to fill it...
+			- It is suggested to be of size $\frac{\text{RTT}\cdot C}{\sqrt{N}}$
+			- $C$ is link capacity/bandwidth, $N$ is number of input port.
+		- Buffer management
+			- Drop policy: which packet to drop when the buffer is full?
+				- tail drop: drop the arriving one
+				- priority
+			- Scheduling discipline: which packet in queue to transmit first?
+				- *It's not clear* ***which*** *buffer is this "scheduling" trick applied. Perhaps both buffer could be applied to.*
+				- First Come First Served (FCFS) / First In First Out (FIFO)
+				- Priority Scheduling
+					- Partition packets into different priority according to header info.
+					- Deal with the packet with highest priority first.
+				- Round Robin (RR)
+					- Multiple queues, separated according to header info.
+					- Scan each queue cyclically and repeatedly, gives the queue in turn a same time interval to process.
+					- ![image.png](../assets/image_1676120358680_0.png){:height 219, :width 427}
+				- Weighted Fair Queue (WFQ)
+					- Generalized RR.
+					- Given each queue a different weight, and allocate time interval to this queue accordingly.
+					- Minimum bandwidth guarantee for each queue. (by its weight)
+	- the Internet Protocol (IP)
+		- IP datagram
+			- ![image.png](../assets/image_1676120693465_0.png)
+			- The datagram could be separated into several fragments. 16-bit identifier is used to identify which fragment is this.
+			- The header checksum is the checksum for the header. The payload data is (typically) a TCP/UDP segment, so it will have its own checksum.
+			- "options" is optional: if there is none, the payload data starts there right away.
+		- Subnet
+			- Interface: connection between host/router and physical link
+				- Do not wander why interfaces are actually connected. It's the concern of lower layer.
+				- ![image.png](../assets/image_1676121174853_0.png){:height 293, :width 369}
+			- Subnet: **device interfaces** that can physically reach each other without passing through an intervening router. (marked blue in above figure)
+				- ![image.png](../assets/image_1676121725422_0.png){:height 226, :width 380}
+				- **Note**: The link between two router is a subnet. (in above pic)
+			- IP address structure
+				- Subnet part: the interfaces in the same subnet share a same high order bits (in pic, 223.1.1)
+				- Host part: remaining low order bits.
+			- Classless Inter-domain Routing (CIDR)
+				- The length of subnet part of an IP is not fixed.
+				- A subnet be express as "a.b.c.d/x", where x is length of its subnet part.
+				- E.g., "223.1.1.0/24" is a subnet in above pic. (the host part is denoted zero)
+			- Dynamic Host Configuration Protocol (DHCP)
+				- To help host in a subnet get its own IP.
+				- Process
+					- The host broadcasts DHCP discover message. [optional]
+					- The **DHCP server** responds with DHCP offer message, with a available IP address. [optional]
+					- The host requests IP address by broadcasting DHCP request message.
+					- The DHCP server broadcasts an ACK.
+					- **Note**
+						- the first two steps can be skipped if the host remembers and wishes to reuse a previously allocated network address.
+						- Broadcasting: fill the target IP with "255.255.255.255", and source IP with "0.0.0.0" (which indicates that it has no address yet)
+						- The broadcast would be heard by everyone in the subnet, but not out of it.
+				- The DHCP server can also return some useful info to help the new comer set up
+					- address of first-hop router for client
+					- name and IP address of DNS sever
+					- network mask (indicating network versus host portion of address)
+-
