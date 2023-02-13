@@ -865,3 +865,4 @@ public:: true
 				- It selects an AP.
 				- Perform authentication.
 				- Then typically run DHCP to get IP address.
+				-
