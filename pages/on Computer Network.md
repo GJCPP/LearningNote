@@ -804,5 +804,5 @@ public:: true
 			- Then A has a datagram with dest IP B's.
 			- A frames this datagram with dest MAC the first hop router's.
 			- That router receives the frame, and takes out the datagram.
-			- The problem next is to the router! It will again
+			- The problem next is to the router! It will again frame the datagram and do the same thing!
 			-
