@@ -883,4 +883,4 @@ public:: true
 		- Confidentiality: only sender and intended receiver can "understand" message contents.
 		- Authentication: sender and receiver want to confirm identity of each other.
 		- Message integrity: ensure message not altered without detection.
-			- Access and availability:
+		- Access and availability: services must be accessible and available to users
