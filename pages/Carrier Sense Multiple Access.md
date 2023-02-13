@@ -35,6 +35,7 @@
 	- SIFS: Short Inter-frame Spacing
 	- Sender:
 		- if senses channel idle for DIFS, then transmit entire frame.
+			- **And do not wait for ACK.**
 		- if senses channel busy
 			- Exponential back-off: the timer starts after DIFS, and is frozen when the channel busy
-			- When the timer goes to zero,
+			- When the timer goes to zero, transmits entire frame and wait for ACK.**
