@@ -7,4 +7,5 @@
 - Protocol
 	- When a node has a new frame to send, it sends the frame right away.
 	- If no collision, the node sends next frame (if has) in next slot.
-	- If colli
+	- If collided, in each following slot, the node has a probability of $p$ to resend that frame.
+-
