@@ -731,5 +731,6 @@ public:: true
 				- Access to channel in "rounds".
 				- Each station gets fixed length of slot in each round.
 				- Unused slot goes idle.
-				- ![image.png](../assets/image_1676252159179_0.png)
+				- ![image.png](../assets/image_1676252159179_0.png){:height 101, :width 529}
+			- Fre
 				-
