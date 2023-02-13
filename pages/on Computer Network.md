@@ -780,4 +780,4 @@ public:: true
 			- MAC address administered by IEEE.
 			- Manufacturer buys portion of MAC space from IEEE to ensure uniqueness.
 		- Address resolution protocol (ARP)
-			-
+			- Translate IP to MAC.
