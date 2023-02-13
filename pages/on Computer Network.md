@@ -868,6 +868,7 @@ public:: true
 			- The MAC protocol: ((63e99e70-ca0b-4914-9b77-f240abbc5681))
 		- 802.11 Frame
 			- ![image.png](../assets/image_1676294809973_0.png){:height 312, :width 517}
+			- The three MACs are: AP, sender, first hop router
 			-
 	- Blue-tooth
 		- Personal area network: within ten meters.
