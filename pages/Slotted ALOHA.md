@@ -3,4 +3,6 @@
 	- Time partitioned into equal size slots.
 	- Nodes start to transmit only at slot beginning.
 	- **Nodes are synchronized.**
-	- If $
+	- If 2 or more nodes transmit in slot, all nodes detect collision.
+- Protocol
+	- A node sends the frame right away.
