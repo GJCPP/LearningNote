@@ -5,4 +5,6 @@
 	- **Nodes are synchronized.**
 	- If 2 or more nodes transmit in slot, all nodes detect collision.
 - Protocol
-	- A node sends the frame right away.
+	- When a node has a new frame to send, it sends the frame right away.
+	- If no collision, the node sends next frame (if has) in next slot.
+	- If colli
