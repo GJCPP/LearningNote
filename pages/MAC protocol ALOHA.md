@@ -14,4 +14,6 @@
 		- where $p^*$ is the optimal $p$ according to $n$.
 - Pure ALOHA
 	- Do not slot time or synchronize between nodes.
+	- On collision: wait for a random amount of time.
+	- Efficiency: 0.18 (half of the slotted one)
 	-
