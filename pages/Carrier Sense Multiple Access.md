@@ -31,6 +31,9 @@
 		- $\frac{L}{R}\geq \frac{2S}{R_{prop}}$, where $S$ is the longest distance.
 - CSMA/CA
 	- CA: Collision Avoidance
-	- DIFS:
+	- DIFS: Distributed Inter-frame Spacing, a fixed constant
+	- SIFS: Short Inter-frame Spacing
 	- Sender:
-		- if sensed channel idle for DIFS, then transmit entire frame.
+		- if senses channel idle for DIFS, then transmit entire frame.
+		- if senses channel busy
+			- Exponential back-off
