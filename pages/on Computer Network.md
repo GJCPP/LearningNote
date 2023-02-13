@@ -768,5 +768,8 @@ public:: true
 			- "Link layer version of IP address".
 			- For addressing in subnet, link layer.
 			- Also named LAN / physical / Ethernet address
-		-
+		- 48 bit
+			- Often express as twelve hexadecimal number
+			- e.g. 1A-2F-BB-76-09-AD
+			-
 		-
