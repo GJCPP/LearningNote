@@ -785,4 +785,5 @@ public:: true
 				- Each node (i.e. host, router) on LAN has a table.
 				- The table record IP <-> MAC mappings for some LAN node; <IP, MAC, TTL>
 				- TTL: Time to live, typically 20min; after which this mapping will be forgotten.
-				-
+			- If one wants to know a MAC of an IP
+				- Broadcast a query (**datagram**)
