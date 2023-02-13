@@ -683,6 +683,6 @@ public:: true
 - Chapter 6: Link Layer
 	- In this chapter:
 		- Hosts and routers are viewed as "nodes".
-		- Data frame.
+		- Layer-2 packet: data frame.
 		- Framing: add header and tail to a datagram to make it a frame.
 	-
