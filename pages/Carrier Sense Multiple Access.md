@@ -27,5 +27,6 @@
 			-
 	- **Each frame must be long enough to detect any collision**
 		- ![image.png](../assets/image_1676253547942_0.png){:height 254, :width 318}
+		- $\frac{L}{R}\geq \frac{2S}{R_{prop}}$
 		-
 	-
