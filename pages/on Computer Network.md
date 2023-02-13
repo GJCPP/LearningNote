@@ -789,3 +789,4 @@ public:: true
 				- Broadcast a query (**datagram**), with target MAC FF-FF-FF-FF-FF-FF (all one).
 				- Also, with source IP/MAC being itself, and target IP being the one it wants to look up.
 				- All nodes on **LAN** receives this query.
+				-
