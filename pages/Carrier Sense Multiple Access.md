@@ -8,3 +8,5 @@
 	- collisions detected within short time
 	- colliding transmissions aborted, reducing channel wastage
 	- collision detection easy in wired, difficult with wireless
+		- Because the node must be able to "hear" when "talk", which is difficult in wireless setting.
+	-
