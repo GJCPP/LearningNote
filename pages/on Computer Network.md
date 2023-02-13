@@ -771,7 +771,7 @@ public:: true
 			- c.f. [here](https://www.youtube.com/watch?v=NyZWSvSj8ek)
 		- Function
 			- "Link layer version of IP address".
-			- For addressing in subnet, link layer.
+			- For addressing in the same LAN, link layer.
 			- Also named LAN / physical / Ethernet address
 		- 48 bit
 			- Often express as twelve hexadecimal number
