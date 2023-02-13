@@ -10,7 +10,12 @@
 	- collision detection easy in wired, difficult with wireless
 		- Because the node must be able to "hear" when "talk", which is difficult in wireless setting.
 	- Ethernet CSMA/CD algorithm
-		- 1. NIC receives datagram,
+		- 1. NIC receives datagram from network layer, creates new frame.
+		- 2. If NIC senses the channel
+			- idle: send right away
+			- busy: wait until it goes idle
+		- 3. If without collision: done.
+		- 4.
 	- **Each frame must be long enough to detect any collision**
 		- ![image.png](../assets/image_1676253547942_0.png){:height 254, :width 318}
 		-
