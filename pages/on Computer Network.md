@@ -767,5 +767,6 @@ public:: true
 		- Function
 			- "Link layer version of IP address".
 			- For addressing in subnet, link layer.
+			- Also named LAN / physical / Ethernet address
 		-
 		-
