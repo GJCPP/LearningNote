@@ -834,5 +834,5 @@ public:: true
 		- When LAN scales, broadcast passing through the whole LAN would cause problem in efficiency, security, privacy issues.
 		- Switch supporting VLAN could create VLAN, which limits the broadcast domain.
 			- Broadcast domain: where each node can reach each other by broadcast in link layer
-			- VLAN < subnet < LAN < WAN
+			- VLAN < subnet < LAN < WAN, separated by (VLAN) switch, router, gateway respectively
 			-
