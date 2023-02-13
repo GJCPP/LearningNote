@@ -811,4 +811,6 @@ public:: true
 			- ![image.png](../assets/image_1676281129570_0.png){:height 165, :width 577}
 		- Ethernet frame
 			- ![image.png](../assets/image_1676281084602_0.png){:height 214, :width 513}
-			-
+		- Feature
+			- connectionless: no hand-shaking
+			- unreliable: no ACK;
