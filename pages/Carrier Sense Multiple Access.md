@@ -38,4 +38,6 @@
 			- **And do not wait for ACK.**
 		- if senses channel busy
 			- Exponential back-off: the timer starts after DIFS, and is frozen when the channel busy
-			- When the timer goes to zero, transmits entire frame and wait for ACK.**
+			- When the timer goes to zero, transmits entire frame and **wait for ACK.**
+	- Receiver
+		- if frame received ok, returns ACK after SIFS.
