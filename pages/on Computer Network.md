@@ -765,5 +765,7 @@ public:: true
 							- one point of failure (token lost)
 	- MAC address
 		- Function
-			-
+			- "Link layer version of IP address".
+			- For addressing in subnet, link layer.
+		-
 		-
