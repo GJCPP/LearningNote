@@ -19,7 +19,8 @@
 		- 5. After abort, NIC enters binary back-off
 			- After $m$th abort, NIC chooses $K \gets \{0, 1, ..., 2^m-1\}$ randomly
 			- It then waits for $K\cdot 512$ bit times, and goes to step 2.
-			-
+		- Efficiency
+			- $\frac{1 / (1+5t_{prop}/t_{tran})$
 			-
 			-
 			-
