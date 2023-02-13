@@ -805,4 +805,5 @@ public:: true
 			- A frames this datagram with dest MAC the first hop router's.
 			- That router receives the frame, and takes out the datagram.
 			- The router will again frame the datagram and do the same thing!
+	- Ethernet
 		-
