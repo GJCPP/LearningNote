@@ -819,5 +819,5 @@ public:: true
 			- Common MAC protocol and frame format
 			- Different speed:2Mbps, 10Mbps, 100Mbps, 1Gbps, 10Gbps, 40Gbps
 			- Different physical layer media: cable, fiber
-		- Ethernet switcher
+		- Ethernet switch
 			-
