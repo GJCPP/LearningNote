@@ -799,5 +799,6 @@ public:: true
 		- Routing to another subnet
 			- Consider now that A wants to send B a datagram.
 				- 1. Assume A knows B's IP address
-				- 2. Assume A knows the first hop router (by DHCP probably)
-				- 3.
+				- 2. Assume A knows the first hop router (by DHCP)
+				- 3. Assume A knows B's MAC address (by ARP)
+			- Then A
