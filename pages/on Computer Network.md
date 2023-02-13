@@ -750,4 +750,4 @@ public:: true
 				- feature
 					- full-power sending
 					- no a prior coordination
-				-
+				- Slotted ALOHA]]
