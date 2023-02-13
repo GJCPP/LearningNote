@@ -817,4 +817,6 @@ public:: true
 		- Ethernet MAC protocol: unslotted CSMA/CD with binary back-off
 		- Many different standards
 			- Common MAC protocol and frame format
-			- Different speed:
+			- Different speed:2Mbps, 10Mbps, 100Mbps, 1Gbps, 10Gbps, 40Gbps
+			- Different physical layer media: cable, fiber
+			-
