@@ -783,4 +783,6 @@ public:: true
 			- Translate IP to MAC.
 			- ARP table
 				- Each node (i.e. host, router) on LAN has a table.
-				- The table record IP <-> MAC mapping
+				- The table record IP <-> MAC mappings for some LAN node; <IP, MAC, TTL>
+				- TTL: Time to live, typically 20min; after which this mapping will be forgotten.
+				-
