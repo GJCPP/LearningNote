@@ -766,7 +766,7 @@ public:: true
 	- MAC address
 		- WTF is LAN?
 			- Roughly, gateway separates LANs, and router separates subnets.
-			-
+			- For example, school is a LAN, each department in it a subnet.
 			- ![image.png](../assets/image_1676257894119_0.png)
 			- c.f. [here](https://www.youtube.com/watch?v=NyZWSvSj8ek)
 		- Function
