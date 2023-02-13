@@ -765,7 +765,8 @@ public:: true
 							- one point of failure (token lost)
 	- MAC address
 		- WTF is LAN?
-			- Briefly talking, gateway separates LANs, and router separates
+			- Roughly, gateway separates LANs, and router separates subnets.
+			-
 			- ![image.png](../assets/image_1676257894119_0.png)
 			- c.f. [here](https://www.youtube.com/watch?v=NyZWSvSj8ek)
 		- Function
