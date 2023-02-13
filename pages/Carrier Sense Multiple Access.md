@@ -1,0 +1,4 @@
+- Carrier Sense Multiple Access (CSMA)
+- Simple CSMA
+	- 1. Listen before send.
+	- 2. If channul
