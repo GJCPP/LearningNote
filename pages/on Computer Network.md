@@ -679,7 +679,6 @@ public:: true
 				  Then record RTT.
 		-
 - Chapter 6: Link Layer
-  collapsed:: true
 	- In this chapter:
 		- Hosts and routers are viewed as "nodes".
 		- Layer-2 packet: data frame.
@@ -752,7 +751,6 @@ public:: true
 					- ![image.png](../assets/image_1676252283184_0.png){:height 174, :width 540}
 					-
 			- Random access protocol
-			  collapsed:: true
 				- feature
 					- full-power sending
 					- no a prior coordination
