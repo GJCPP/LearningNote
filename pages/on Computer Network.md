@@ -831,5 +831,5 @@ public:: true
 				- If destination not in switch table, it **flood** the message to every of its interfaces.
 				- Otherwise it selectively sends on just one link.
 	- Virtual LAN (VLAN)
-		- When LAN scales:
-			-
+		- When LAN scales, broadcast passing through the whole LAN would cause problem in efficiency, security, privacy issues.
+		-
