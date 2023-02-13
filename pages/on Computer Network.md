@@ -858,4 +858,6 @@ public:: true
 			- AP admin chooses the frequency it uses.
 			- Neighboring AP could interfere with each other if on the same frequency!
 			- Join AP
-				-
+				- Arriving host can scan each channels, listen for **beacon frame**.
+					-
+				- It chooses an AP.
