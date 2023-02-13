@@ -880,4 +880,5 @@ public:: true
 		- 2.4-2.5 GHz ISM radio band
 - Chapter 8: Security
 	- Principles of security
+		- Confidentiality: only sender and intended receiver can "understand" message contents
 		-
