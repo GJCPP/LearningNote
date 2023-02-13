@@ -807,4 +807,8 @@ public:: true
 			- The router will again frame the datagram and do the same thing!
 	- Ethernet
 		- Dominant wired LAN technology.
-		-
+		- Physical topology
+			- ![image.png](../assets/image_1676281129570_0.png){:height 165, :width 577}
+		- Ethernet frame
+			- ![image.png](../assets/image_1676281084602_0.png){:height 214, :width 513}
+			-
