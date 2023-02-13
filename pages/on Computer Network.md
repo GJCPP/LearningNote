@@ -869,6 +869,7 @@ public:: true
 		- 802.11 Frame
 			- ![image.png](../assets/image_1676294809973_0.png){:height 312, :width 517}
 			- The three MACs are: AP, sender, first hop router
+			- AP is directly connected to router via wired Ethernet. AP helps host create Ethernet frame.
 			-
 	- Blue-tooth
 		- Personal area network: within ten meters.
