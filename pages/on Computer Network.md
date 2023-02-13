@@ -590,7 +590,6 @@ public:: true
 					- ![image.png](../assets/image_1676200583053_0.png){:height 288, :width 477}
 					-
 - Chapter 5: Network Layer - Control Plane
-  collapsed:: true
 	- Dijkstra’s link-state routing algorithm
 	  collapsed:: true
 		- Each router broadcasts its link state information to other router
