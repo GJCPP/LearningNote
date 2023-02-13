@@ -37,7 +37,7 @@
 	- Sender:
 		- if senses channel idle for DIFS, then transmit entire frame.
 			- **And wait for ACK.**
-			- Why ack here: do not let upper RDT keeps retrying (which should not be caring )
+			- Why ack here: do not let upper RDT keeps retrying (which should not be concerning about  "back-off" things).
 		- if senses channel busy
 			- Exponential back-off: the timer starts after DIFS, and is frozen when the channel busy
 			- When the timer goes to zero, transmits entire frame and **wait for ACK.**
