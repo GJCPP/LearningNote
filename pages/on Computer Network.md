@@ -686,6 +686,11 @@ public:: true
 		- Layer-2 packet: data frame.
 		- Framing: add header and tailer to a datagram to make it a frame.
 	- Link layer is implemented in network interface card (NIC, 网卡) or on a chip.
+	- Frame structure
+		- A little complicated.
+		- ![image.png](../assets/image_1676259199176_0.png)
+		  (from wiki)
+		-
 	- Error detection
 		- EDC: Error detection and correction
 		- Parity checking
