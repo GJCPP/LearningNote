@@ -797,9 +797,10 @@ public:: true
 				- All nodes on **LAN** receives this query.
 				- The node with dest IP address would return the correct MAC address.
 		- Routing to another subnet
-			- Consider now that A wants to send B a frame.
+			- Consider now that A wants to send B a datagram. But A and B are in different subnet.
 				- 1. Assume A knows B's IP address
 				- 2. Assume A knows the first hop router (by DHCP)
 				- 3. Assume A knows B's MAC address (by ARP)
-			- Then A creates a datagram with dest IP the first hop router's.
+			-
+			- Then A creates a datagram with dest IP B's.
 			-
