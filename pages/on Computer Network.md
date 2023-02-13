@@ -845,4 +845,6 @@ public:: true
 			- given physical lay -> increase power to increase SNR -> decrease BER (bit error rate)
 			- given SNR -> choose physical layer to meet BER requirement, while giving highest throughput
 			- (when the power is fixed, decreasing transmission rate can decrease BER)
-			-
+		- Hidden terminal
+			- A->B and C->B, but both A, C do not know their signal interfering at B.
+			- Since A can not reach C, nor can C reach A.
