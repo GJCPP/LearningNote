@@ -12,4 +12,5 @@
 	- Efficiency
 		- $\lim_{n\to +\infty} np^*(1-p^*)^{n-1}=1/e=0.37$
 		- where $p^*$ is the optimal $p$ according to $n$.
-- Pure
+- Pure ALOHA
+	-
