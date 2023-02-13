@@ -30,6 +30,7 @@
 		- The time for transmission must be long enough to detect collision; that is, longer than 2 maximal RTT.
 		- $\frac{L}{R}\geq \frac{2S}{R_{prop}}$, where $S$ is the longest distance.
 - CSMA/CA
+  id:: 63e99e70-ca0b-4914-9b77-f240abbc5681
 	- CA: Collision Avoidance
 	- DIFS: Distributed Inter-frame Spacing, a fixed constant
 	- SIFS: Short Inter-frame Spacing
