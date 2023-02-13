@@ -875,4 +875,5 @@ public:: true
 		- Personal area network: within ten meters.
 		- ![image.png](../assets/image_1676295113054_0.png){:height 253, :width 531}
 		- TDM: 625\mu sec; the odd slots used by master, and even by clients.
-		-
+		- FDM: sender uses 79 frequency channels in known, pseudo-random order slot-to-slot (spread spectrum)
+		- 2.4-2.5 GHz ISM radio band
