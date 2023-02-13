@@ -806,4 +806,5 @@ public:: true
 			- That router receives the frame, and takes out the datagram.
 			- The router will again frame the datagram and do the same thing!
 	- Ethernet
+		- Dominant wired LAN technology.
 		-
