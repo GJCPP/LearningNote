@@ -801,6 +801,6 @@ public:: true
 				- 1. Assume A knows B's IP address
 				- 2. Assume A knows the first hop router (by DHCP)
 				- 3. Assume A knows B's MAC address (by ARP)
-			-
-			- Then A creates a datagram with dest IP B's.
+			- Then A has a datagram with dest IP B's.
+			- A frames this datagram with
 			-
