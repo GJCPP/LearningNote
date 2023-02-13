@@ -689,5 +689,5 @@ public:: true
 	- Error detection
 		- EDC: Error detection and correction
 		- Parity checking
-			- ![image.png](../assets/image_1676250693869_0.png)
+			- ![image.png](../assets/image_1676250693869_0.png){:height 307, :width 594}
 			-
