@@ -874,4 +874,5 @@ public:: true
 	- Blue-tooth
 		- Personal area network: within ten meters.
 		- ![image.png](../assets/image_1676295113054_0.png){:height 253, :width 531}
-		- TDM: 625
+		- TDM: 625\mu sec; the odd slots used by master, and even by clients.
+		-
