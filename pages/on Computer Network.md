@@ -839,3 +839,4 @@ public:: true
 		- Difference with wired one
 			- decreased signal strength
 			- interference with other sources
+			- multipath propagation: radio signal arriving at slightly different times
