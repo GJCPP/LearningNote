@@ -1,3 +1,6 @@
 - Assuptions
 	- Frames share a same length.
-	- Time partitioned into fixed
+	- Time partitioned into equal size slots.
+	- Nodes start to transmit only at slot beginning.
+	- **Nodes are synchronized.**
+	- If $
