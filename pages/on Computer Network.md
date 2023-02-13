@@ -714,5 +714,9 @@ public:: true
 			- Idealized goal
 				- When only one node wants to transmit, it transmit at rate $R$ (full)
 				- When $N$ nodes wants, at rate $R/N$
-				- Fully decentralized.
+				- Fully decentralized
+					- No special node to coordinate
+					- No synchronization of clock, slot.
+				- Simple
+			-
 				-
