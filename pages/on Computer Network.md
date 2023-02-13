@@ -815,4 +815,6 @@ public:: true
 			- connectionless: no hand-shaking
 			- unreliable: no ACK; retransmit only if upper layer uses RDT (e.g. TCP).
 		- Ethernet MAC protocol: unslotted CSMA/CD with binary back-off
-		-
+		- Many different standards
+			- Common MAC protocol and frame format
+			- Different speed:
