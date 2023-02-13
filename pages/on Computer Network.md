@@ -855,4 +855,7 @@ public:: true
 	- Wi-Fi (802.11)
 		- Access point (AP)
 			- small "base station"
-			-
+			- AP admin chooses the frequency it uses.
+			- Neighboring AP could interfere with each other if on the same frequency!
+			- Join AP
+				-
