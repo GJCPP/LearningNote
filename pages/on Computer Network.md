@@ -859,5 +859,7 @@ public:: true
 			- Neighboring AP could interfere with each other if on the same frequency!
 			- Join AP
 				- Arriving host can scan each channels, listen for **beacon frame**.
-					-
-				- It chooses an AP.
+					- Beacon frame contains AP's name (SSID) and MAC address.
+				- It selects an AP.
+				- Perform authentication.
+				- Then typically run DHCP to get IP address.
