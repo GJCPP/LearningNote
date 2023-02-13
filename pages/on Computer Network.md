@@ -781,3 +781,6 @@ public:: true
 			- Manufacturer buys portion of MAC space from IEEE to ensure uniqueness.
 		- Address resolution protocol (ARP)
 			- Translate IP to MAC.
+			- ARP table
+				- Each node (i.e. host, router) on LAN has a ARP table.
+				-
