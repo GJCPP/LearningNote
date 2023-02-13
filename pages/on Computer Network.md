@@ -853,4 +853,6 @@ public:: true
 			- Key: the chipping sequences are orthogonal, so you can project the received vector back to their basis.
 			- This can be used when a base station sends information simultaneously to multiple phones.
 	- Wi-Fi (802.11)
-		-
+		- Access point (AP)
+			- small "base station"
+			-
