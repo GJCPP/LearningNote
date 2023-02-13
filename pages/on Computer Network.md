@@ -860,7 +860,8 @@ public:: true
 			- Join AP
 				- Arriving host can scan each channels, listen for **beacon frame**.
 					- Beacon frame contains AP's name (SSID) and MAC address.
-					-
+					- Passive scanning: AP keeps sending beacon from time to time.
+					- Active scanning: The arriving host requests beacon frame first by broadcasting.
 				- It selects an AP.
 				- Perform authentication.
 				- Then typically run DHCP to get IP address.
