@@ -711,4 +711,8 @@ public:: true
 			- What is it
 				- distributed algorithm that determines how nodes share channel, i.e., determine when node can transmit
 				- communication about channel sharing must use channel itself
-			- Ideal
+			- Idealized goal
+				- When only one node wants to transmit, it transmit at rate $R$ (full)
+				- When $N$ nodes wants, at rate $R/N$
+				- Fully decentralized.
+				-
