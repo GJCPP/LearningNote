@@ -36,4 +36,5 @@
 	- Sender:
 		- if senses channel idle for DIFS, then transmit entire frame.
 		- if senses channel busy
-			- Exponential back-off
+			- Exponential back-off: the timer starts after DIFS, and is frozen when the channel busy
+			- When the timer goes to zero,
