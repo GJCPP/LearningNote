@@ -758,5 +758,9 @@ public:: true
 						- "Do you have something to say?"
 					- Token passing
 						- Control token passed from one node to next sequentially.
-						-
-				-
+						- Concern
+							- token overhead
+							- latency
+							- one point of failure (token lost)
+		-
+			-
