@@ -797,5 +797,7 @@ public:: true
 				- All nodes on **LAN** receives this query.
 				- The node with dest IP address would return the correct MAC address.
 		- Routing to another subnet
-			- Assume that A wants to send B a datagram.
-				-
+			- Consider now that A wants to send B a datagram.
+				- 1. Assume A knows B's IP address
+				- 2. Assume A knows the first hop router (by DHCP probably)
+				- 3.
