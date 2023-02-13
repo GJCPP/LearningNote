@@ -4,7 +4,7 @@
 	- 2. If channel busy, defer.
 	- 3. If channel idle, send it.
 	- **No reliable transmission in link layer: RDT is realized in network layer (e.g. TCP)**
-		- So no ACK needed. (which can be problematic, if two sender's TCPs )
+		- So no ACK needed. (which can be problematic though, if two senders' TCPs just keep trying)
 - CSMA/CD
 	- CD: Collision detection
 	- collisions detected within short time
@@ -37,7 +37,7 @@
 	- Sender:
 		- if senses channel idle for DIFS, then transmit entire frame.
 			- **And wait for ACK.**
-			- Why ack here:
+			- Why ack here: do not let upper RDT keeps retrying (which should not be caring )
 		- if senses channel busy
 			- Exponential back-off: the timer starts after DIFS, and is frozen when the channel busy
 			- When the timer goes to zero, transmits entire frame and **wait for ACK.**
