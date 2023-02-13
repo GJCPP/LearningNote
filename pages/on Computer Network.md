@@ -684,5 +684,5 @@ public:: true
 	- In this chapter:
 		- Hosts and routers are viewed as "nodes".
 		- Layer-2 packet: data frame.
-		- Framing: add header and tail to a datagram to make it a frame.
+		- Framing: add header and tailer to a datagram to make it a frame.
 	-
