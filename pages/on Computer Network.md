@@ -802,5 +802,7 @@ public:: true
 				- 2. Assume A knows the first hop router (by DHCP)
 				- 3. Assume A knows B's MAC address (by ARP)
 			- Then A has a datagram with dest IP B's.
-			- A frames this datagram with
+			- A frames this datagram with dest MAC the first hop router's.
+			- That router receives the frame, and takes out the datagram.
+			- The problem next is left to
 			-
