@@ -590,6 +590,7 @@ public:: true
 					- ![image.png](../assets/image_1676200583053_0.png){:height 288, :width 477}
 					-
 - Chapter 5: Network Layer - Control Plane
+  collapsed:: true
 	- Dijkstra’s link-state routing algorithm
 	  collapsed:: true
 		- Each router broadcasts its link state information to other router
@@ -622,7 +623,6 @@ public:: true
 			- ...
 			- It takes many rounds for z to realize that the current optimal path to x is z->x. So does y.
 	- Make routing scalable
-	  collapsed:: true
 		- Why above scheme too idealized:
 		  collapsed:: true
 			- In real Internet, their are billions of devices.
@@ -637,7 +637,6 @@ public:: true
 			- All routers must run the same intra-domain protocol
 			- Gateway router: at “edge” of its own AS, has link(s) to router(s) in other AS’es
 		- Inter-AS (域间路由)
-		  collapsed:: true
 			- ![image.png](../assets/image_1676212438318_0.png)
 			- OSPF
 			  collapsed:: true
