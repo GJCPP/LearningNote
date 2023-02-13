@@ -850,4 +850,6 @@ public:: true
 			- Since A can not reach C, nor can C reach A.
 		- CDMA: Code division multiple access
 			- ![image.png](../assets/image_1676292363552_0.png){:height 393, :width 668}
-			- Key: the chipping sequences are orthogonal, so you can project the
+			- Key: the chipping sequences are orthogonal, so you can project the received vector back to their basis.
+			- This can be used when a base station sends information simultaneously to multiple phones.
+			-
