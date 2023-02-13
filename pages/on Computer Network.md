@@ -813,4 +813,5 @@ public:: true
 			- ![image.png](../assets/image_1676281084602_0.png){:height 214, :width 513}
 		- Feature
 			- connectionless: no hand-shaking
-			- unreliable: no ACK;
+			- unreliable: no ACK; retransmit only if upper layer uses RDT (e.g. TCP).
+			-
