@@ -821,5 +821,7 @@ public:: true
 			- Different physical layer media: cable, fiber
 		- Ethernet switch
 			- A link-layer device
+				- transparent: hosts unaware of its existence
+				- plug-and-play, self-learning: need not to be configured
 				-
 			-
