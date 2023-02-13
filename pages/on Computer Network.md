@@ -754,5 +754,9 @@ public:: true
 				- [[Carrier Sense Multiple Access]]
 				- Taking turns MAC protocol
 					- Polling 轮询
-						- Muster
+						- Muster node invites other nodes to transmit in turn.
+						- "Do you have something to say?"
+					- Token passing
+						- Control token passed from one node to next sequentially.
+						-
 				-
