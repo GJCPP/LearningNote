@@ -31,4 +31,6 @@
 		- $\frac{L}{R}\geq \frac{2S}{R_{prop}}$, where $S$ is the longest distance.
 - CSMA/CA
 	- CA: Collision Avoidance
-	-
+	- DIFS:
+	- Sender:
+		- if sensed channel idle for DIFS, then transmit entire frame.
