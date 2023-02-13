@@ -848,3 +848,6 @@ public:: true
 		- Hidden terminal
 			- A->B and C->B, but both A, C do not know their signal interfering at B.
 			- Since A can not reach C, nor can C reach A.
+		- CDMA: Code division multiple access
+			- ![image.png](../assets/image_1676292363552_0.png){:height 393, :width 668}
+			-
