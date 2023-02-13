@@ -835,4 +835,7 @@ public:: true
 			- VLAN < subnet < LAN < WAN, separated by (VLAN) switch, router, gateway respectively
 			-
 - Chapter 7: Wireless and mobile network
-	-
+	- Wireless
+		- Difference with wired one
+			- decreased signal strength
+			- interference with other sources
