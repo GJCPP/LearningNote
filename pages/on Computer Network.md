@@ -765,7 +765,8 @@ public:: true
 							- one point of failure (token lost)
 	- MAC address
 		- WTH is LAN?
-			- ![image.png](../assets/image_1676257693389_0.png)
+			-
+			-
 			- c.f. [here](https://www.youtube.com/watch?v=NyZWSvSj8ek)
 		- Function
 			- "Link layer version of IP address".
