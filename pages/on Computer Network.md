@@ -732,5 +732,7 @@ public:: true
 				- Each station gets fixed length of slot in each round.
 				- Unused slot goes idle.
 				- ![image.png](../assets/image_1676252159179_0.png){:height 101, :width 529}
-			- Fre
+			- Frequency division multiple access (FDMA)
+				- Divided into different bands.
+				- ![image.png](../assets/image_1676252283184_0.png){:height 174, :width 540}
 				-
