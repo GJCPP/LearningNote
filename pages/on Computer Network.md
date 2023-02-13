@@ -771,5 +771,7 @@ public:: true
 		- 48 bit
 			- Often express as twelve hexadecimal number
 			- e.g. 1A-2F-BB-76-09-AD
+		- Allocation
+			- MAC address administered by IEEE.
+			- Manufacturer buys portion of MAC space from IEEE to ensure uniqueness.
 			-
-		-
