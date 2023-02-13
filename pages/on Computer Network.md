@@ -411,6 +411,7 @@ public:: true
 			- Fairness: if there are $T$ connections over a  link with bandwidth $R$, then each connection should share a bandwidth of $R/T$.
 			- ![image.png](../assets/image_1676026642279_0.png)
 - Chapter 4: Network Layer - Data Plane
+  collapsed:: true
 	- Network layer functions
 		- 1. **forwarding**: move packets from a router’s input link to appropriate router output link
 		  2. **routing:** determine route taken by packets from source to destination
@@ -481,6 +482,24 @@ public:: true
 			- The datagram could be separated into several fragments. 16-bit identifier is used to identify which fragment is this.
 			- The header checksum is the checksum for the header. The payload data is (typically) a TCP/UDP segment, so it will have its own checksum.
 			- "options" is optional: if there is none, the payload data starts there right away.
+			- Why fragmenting
+				- Datagram passes through various network, some of which might have constraint on maximum "packet" length.
+					- MTU: Maximum Transmission Unit
+				- So, to push the datagram into lower network, router might fragment it first.
+				- Usually it is when fragments reach their destination that they be pieced together.
+				- Example
+					- Consider a datagram of $4000$B entering a network with MTU being $1500$B.
+					- The datagram: 20B header + 3980B payload, with ID = x.
+					- It will be cut into three fragments:
+					  | length | ID | fragflag | offset |
+					  | ------ | --- | ------- | ------ |
+					  |1500B|x|1|0|
+					  |1500B|x|1|185|
+					  |1040B|x|0|370|
+					- Offset is "per eight Bytes" (**not per 8 bits**)
+					- Each fragment, except the last one, its length must be multiple of $8$B.
+						- The key is the, flag "length of payload" is $16$bits, but "fragment offset" is only $13$bits.
+						- Ref: [Stack overflow: Why the ip fragments must be in multiples of 8 bytes](https://stackoverflow.com/questions/7846442/why-the-ip-fragments-must-be-in-multiples-of-8-bytes)
 		- Subnet
 			- Interface: connection between host/router and physical link
 				- Do not wander why interfaces are actually connected. It's the concern of lower layer.
@@ -491,6 +510,8 @@ public:: true
 			- IP address structure
 				- Subnet part: the interfaces in the same subnet share a same high order bits (in pic, 223.1.1)
 				- Host part: remaining low order bits.
+				- Subnet mask: set all subnet part to 1, host part 0.
+					- E.g. 223.1.9.0/24 -> 11111111 11111111 11111111 00000000
 			- Classless Inter-domain Routing (CIDR)
 				- The length of subnet part of an IP is not fixed.
 				- A subnet be express as "a.b.c.d/x", where x is length of its subnet part.
@@ -498,16 +519,142 @@ public:: true
 			- Dynamic Host Configuration Protocol (DHCP)
 				- To help host in a subnet get its own IP.
 				- Process
+				  collapsed:: true
 					- The host broadcasts DHCP discover message. [optional]
 					- The **DHCP server** responds with DHCP offer message, with a available IP address. [optional]
 					- The host requests IP address by broadcasting DHCP request message.
 					- The DHCP server broadcasts an ACK.
 					- **Note**
+					  collapsed:: true
 						- the first two steps can be skipped if the host remembers and wishes to reuse a previously allocated network address.
-						- Broadcasting: fill the target IP with "255.255.255.255", and source IP with "0.0.0.0" (which indicates that it has no address yet)
+						- Broadcasting: In IP datagram, fill the target IP with "255.255.255.255", and source IP with "0.0.0.0" (which indicates that it has no address yet)
 						- The broadcast would be heard by everyone in the subnet, but not out of it.
+						- All steps are done by broadcasting, so every member of this subnet knows this event.
 				- The DHCP server can also return some useful info to help the new comer set up
+				  collapsed:: true
+					- (Contained in the ACK packet from DHCP server)
 					- address of first-hop router for client
 					- name and IP address of DNS sever
 					- network mask (indicating network versus host portion of address)
--
+				- How does DHCP server get the subnet IP address?
+				  collapsed:: true
+					- It gets allocated portion of its provider ISP’s address space
+			- About longest prefix matching
+			  collapsed:: true
+				- ![image.png](../assets/image_1676198407500_0.png)
+				- When organization 1 moves from fly-by-night-ISP to ISPs-R-Us, it needs not to assign to its hosts with new IP addresses.
+				-
+		- IP allocation
+			- Host gets IP from DHCP server
+			- DHCP server gets a block of IP from its ISP
+			- ISP gets a block of IP from RR (regional registries)
+			- RR gets a block of IP from ICANN (Internet Corporation for Assigned  Names and Numbers)
+			- ICANN owns the IP addresses.
+			- There are in total 5 RRs.
+		- NAT: Network Address Translation
+			- ![image.png](../assets/image_1676199052731_0.png){:height 186, :width 527}
+			- All datagrams leaving / entering local network shares a same IP. (e.g. 138.76.29.7)
+			- All devices in local network have 32-bit addresses in a “private” IP address space that can only be used in local network
+			- The special IP preserved as "private"
+				- 10.0.0.0/8
+				- 172.16.0.0/12
+				- 192.168.0.0/16
+			- Why bothers
+				- Help save IP: only one is needed for the entire local network
+				- can change addresses of host in local network without notifying outside world (inside)
+				- can change ISP without changing addresses of devices in local network (outside)
+				- security: devices inside local net not directly addressable, visible by outside world
+			- How is it done
+				- Outgoing datagram: replace its (source IP, port) with (NAT IP, new port).
+				- Incoming datagram: translate (NAT IP, new port) back to (source IP, port).
+			- Controversy
+				- Inefficiency.
+				- Address “shortage” should be solved by IPv6
+				- Violates end-to-end argument (port manipulation by network-layer device)
+				- NAT traversal: what if client wants to connect to server behind NAT? (P2P)
+		- IPv6
+			- Motivation
+				- IPv4 exhausted.
+				- speed processing/forwarding: 40-byte fixed length header
+			- Datagram
+				- ![image.png](../assets/image_1676200187764_0.png){:height 246, :width 686}
+				- No checksum: speed processing / this should be done in lower layer.
+				- No fragmentation
+					- PTMTU protocol acquires the minimum MTU in the path.
+					- Also, the network supporting IPv6 must satisfy a lower-bound of MTU.
+			- Tunneling
+				- Not all network can be upgraded to support IPv6
+				- When the packet will enter a network not supporting IPv6
+					- Make IPv6 datagram be carried as payload of an IPv4 datagram.
+					- In the IPv4 tunnel, the source and destination are rewritten.
+					- ![image.png](../assets/image_1676200583053_0.png){:height 288, :width 477}
+					-
+- Chapter 5: Network Layer - Control Plane
+	- Dijkstra’s link-state routing algorithm
+		- Each router broadcasts its link state information to other router
+			- With appropriate implementation, its overall complexity is $O(n)$.
+		- Then each router runs Dijkstra algorithm itself.
+		- Oscillation
+			- When link costs depend on traffic volume, route oscillations possible.
+			- That is, all traffic are directed to a same link, its link cost grows rapidly; then directed to another, and the old link becomes optimal again, ...
+			- How to deal with:
+				- Do NOT update synchronously
+				- Instead, each router updates with a random frequency
+	- Distance Vector Algorithm
+		- Based on Bellman-Ford equality: $d(x,y)=\min_{v\in N(x)} \{c_{x,v} + d(v,y)\}$
+		- Each router tells its link state to its neighbor
+		- Each router updates according to the equality.
+		  If shorter path found to any node, it tells this to its neighbor.
+		- Each router updates asynchronously for multiple rounds.
+		- If the network is stable, each router will converge to an optimal "distance vector".
+		- "Good news travels fast" "Bad news travels slow"
+			- If the cost of one link goes small, soon everyone knows.
+			- ![image.png](../assets/image_1676211061409_0.png){:height 122, :width 179}
+			- Firstly, y thought that z has a path to x with cost 5 (by z->y->x).
+			- So y suggests its distance to x is 6.
+			- Then z suggests its distance to x is 7.
+			- ...
+			- It takes many rounds for z to realize that the current optimal path to x is z->x. So does y.
+	- Make routing scalable
+		- Why above scheme too idealized:
+			- In real Internet, their are billions of devices.
+				- Can't store these info + exchanging info swamps links
+			- Administrative autonomy
+				- Routers might want to control its traffic (direct it in a way that maximizes its profit)
+		- Aggregate routers into regions known as “autonomous systems” (AS) (aka "domains")
+		- Intra-AS (域内路由)
+			- All routers must run the same intra-domain protocol
+			- Gateway router: at “edge” of its own AS, has link(s) to router(s) in other AS’es
+		- Inter-AS (域间路由)
+			- ![image.png](../assets/image_1676212438318_0.png)
+			- OSPF
+				- Open: public available, not proprietary
+				- Classic link-state routing: each router has full topology, and runs Dijkstra
+				- Security: all OSPF message authenticated
+			- BGP (Border Gateway Protocol)
+				- the de facto inter-domain routing protocol
+				- BGP session: two BGP routers (“peers”) exchange BGP messages over semi-permanent TCP connection
+					- ![image.png](../assets/image_1676213428258_0.png)
+				- BGP route selection:
+					- (how an AS select its nearby AS to transmit a datagram)
+					- 1. To each AS, it has a preference.
+					- 2. If not 1, then it tries the shortest AS-path.
+					- 3. If 2 ties, then it tries the one that gets out of itself fastest. (Hot potato)
+					- 4. Some more criteria possible.
+			- ![image.png](../assets/image_1676213717395_0.png)
+	- ICMP: Internet Control Message Protocol
+		- Helps host exchange information about network layer with router.
+		- Basic function
+			- error reporting: unreachable host, network, port, protocol
+			- echo request/reply (used by ping)
+		- The ICMP message is carried in IP datagram.
+			- ICMP message: type, code plus first 8 bytes of IP datagram causing error
+			- ![image.png](../assets/image_1676214516591_0.png){:height 225, :width 214}
+		- Traceroute
+			- Send UDP segment with TTL=1, 2,... to the destination, to a randomly chosen port (probably not open at that side).
+			- Check each returned datagram:
+				- type 11: TTL expired
+				- possibly included the router's name + IP address
+				- If the segment reached the host, type 3 code 3: dest port unreachable
+				  Then record RTT.
+		-
