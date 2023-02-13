@@ -786,4 +786,5 @@ public:: true
 				- The table record IP <-> MAC mappings for some LAN node; <IP, MAC, TTL>
 				- TTL: Time to live, typically 20min; after which this mapping will be forgotten.
 			- If one wants to know a MAC of an IP
-				- Broadcast a query (**datagram**)
+				- Broadcast a query (**datagram**), with target MAC FF-FF-FF-FF-FF-FF (all one).
+				- Also, with source IP/MAC being itself, and target IP being the one it wants to know.
