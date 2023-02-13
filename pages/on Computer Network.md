@@ -734,7 +734,7 @@ public:: true
 				- “taking turns”
 				  collapsed:: true
 					- nodes take turns, but nodes with more to send can take longer turns
-			- Channel partitioning
+			- Channel partitioning protocol
 				- Time division multiple access (TDMA)
 				  collapsed:: true
 					- Access to channel in "rounds".
@@ -746,4 +746,8 @@ public:: true
 					- Divided into different bands.
 					- ![image.png](../assets/image_1676252283184_0.png){:height 174, :width 540}
 					-
-			-
+			- Random access protocol
+				- feature
+					- full-power sending
+					- no a prior coordination
+				-
