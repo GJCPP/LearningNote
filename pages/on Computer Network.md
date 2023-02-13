@@ -796,5 +796,4 @@ public:: true
 				- The frame carries source IP/MAC, and target IP. (frame has no source "IP" header)
 				- All nodes on **LAN** receives this query.
 				- The node with dest IP address would return the correct MAC address.
-				- Each
 				-
