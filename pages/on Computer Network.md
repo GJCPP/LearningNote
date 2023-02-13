@@ -832,4 +832,4 @@ public:: true
 				- Otherwise it selectively sends on just one link.
 	- Virtual LAN (VLAN)
 		- When LAN scales, broadcast passing through the whole LAN would cause problem in efficiency, security, privacy issues.
-		-
+		- Switch supporting VLAN could create virtual LAN,
