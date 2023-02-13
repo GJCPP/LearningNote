@@ -41,3 +41,7 @@
 			- When the timer goes to zero, transmits entire frame and **wait for ACK.**
 	- Receiver
 		- if frame received ok, returns ACK after SIFS.
+	- Optional
+		- RTS (Request-to-send) and CTS(Clear-to-send)
+		- The sender first sends RTS, and waits for its CTS.
+		- If
