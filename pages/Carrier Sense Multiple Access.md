@@ -9,5 +9,7 @@
 	- colliding transmissions aborted, reducing channel wastage
 	- collision detection easy in wired, difficult with wireless
 		- Because the node must be able to "hear" when "talk", which is difficult in wireless setting.
-	- ![image.png](../assets/image_1676253547942_0.png){:height 254, :width 318}
+	- **Each frame must be long enough to detect any collision**
+		- ![image.png](../assets/image_1676253547942_0.png){:height 254, :width 318}
+		-
 	-
