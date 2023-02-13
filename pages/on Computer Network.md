@@ -787,7 +787,7 @@ public:: true
 				- TTL: Time to live, typically 20min; after which this mapping will be forgotten.
 			- If one wants to know a MAC of an IP
 				- Broadcast a query (**frame**), with target MAC FF-FF-FF-FF-FF-FF (all one).
-				- The frame is attached with source IP/MAC, and target IP.
+				- The frame carries source IP/MAC, and target IP. (frame has no source "IP" header)
 				- All nodes on **LAN** receives this query.
 				-
 				-
