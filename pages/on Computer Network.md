@@ -860,6 +860,7 @@ public:: true
 			- Join AP
 				- Arriving host can scan each channels, listen for **beacon frame**.
 					- Beacon frame contains AP's name (SSID) and MAC address.
+					-
 				- It selects an AP.
 				- Perform authentication.
 				- Then typically run DHCP to get IP address.
