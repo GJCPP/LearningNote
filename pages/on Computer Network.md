@@ -825,5 +825,7 @@ public:: true
 				- plug-and-play, self-learning: need not to be configured
 			- It's main functionality seems to be replacing bus, and thus improve effiency.
 			- Self-learning
-				- Switch table records <>
+				- Switch table records <MAC, interface, TTL>
+				- On incoming frame, switch records the sender's info.
+				- If destination not in switch table, it
 			-
