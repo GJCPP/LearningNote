@@ -843,4 +843,5 @@ public:: true
 		- SNR: signal-to-noise rate
 			- larger SNR -> easier to select signal from noise
 			- given physical lay -> increase power to increase SNR -> decrease BER (bit error rate)
-			- (when the power is fixed, )
+			- (when the power is fixed, decreasing transmission rate can decrease BER)
+			- given SNR -> choose physical layer to meet BER requirement ->
