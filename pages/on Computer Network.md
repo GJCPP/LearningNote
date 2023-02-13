@@ -693,5 +693,6 @@ public:: true
 			- ![image.png](../assets/image_1676250693869_0.png){:height 307, :width 594}
 			- In the pic, two-dim parity is not correct; d_{4,1} should be 0.
 		- Cyclic Redundancy Check (CRC)
+			- Given data bits D (viewed as binary number).
 			- Given a generator G of $r+1$ bits, with its significant bit being 1.
-			-
+			- Calculate the remainder of D mod G,
