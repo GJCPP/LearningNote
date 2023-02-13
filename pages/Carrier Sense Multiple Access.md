@@ -1,4 +1,6 @@
 - Carrier Sense Multiple Access (CSMA)
 - Simple CSMA
 	- 1. Listen before send.
-	- 2. If channul
+	- 2. If channel busy, defer.
+	- 3. If channel idle, send it.
+-
