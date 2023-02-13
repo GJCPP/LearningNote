@@ -46,4 +46,5 @@
 		- The sender first sends RTS, and waits for its CTS.
 		- If sender receives CTS that is not its, it waits till it receives ACK.
 		- This is used to solve hidden terminal problem.
-		- It's optimal: if the sender is goi
+		- It's optimal: if the sender's gonna send a very long frame, it can use this to "probe" first.
+		-
