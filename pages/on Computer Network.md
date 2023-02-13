@@ -782,5 +782,5 @@ public:: true
 		- Address resolution protocol (ARP)
 			- Translate IP to MAC.
 			- ARP table
-				- Each node (i.e. host, router) on LAN has a ARP table.
-				-
+				- Each node (i.e. host, router) on LAN has a table.
+				- The table record IP <-> MAC mapping
