@@ -17,7 +17,7 @@
 		- 3. If without collision: done.
 		- 4. If collision detected: abort, send jam signal.
 		- 5. After abort, NIC enters binary back-off
-			- After $m$th abort, NIC chooses $K \stackrel{\$}{\gets}$
+			- After $m$th abort, NIC chooses $K \stackrel{\$}{\gets} \{\}$
 			-
 			-
 	- **Each frame must be long enough to detect any collision**
