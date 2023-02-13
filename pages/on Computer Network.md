@@ -886,4 +886,5 @@ public:: true
 		- Access and availability: services must be accessible and available to users
 	- RSA again
 		- ![image.png](../assets/image_1676296520785_0.png){:height 268, :width 559}
-	-
+		- $x^e\mod n$ for encryption.
+		- $y^d\mod n$ for decryption.
