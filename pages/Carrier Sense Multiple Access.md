@@ -4,7 +4,7 @@
 	- 2. If channel busy, defer.
 	- 3. If channel idle, send it.
 	- **No reliable transmission in link layer: RDT is realized in network layer (e.g. TCP)**
-		- So no
+		- So no ACK needed.
 - CSMA/CD
 	- CD: Collision detection
 	- collisions detected within short time
