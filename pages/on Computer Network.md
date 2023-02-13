@@ -830,4 +830,5 @@ public:: true
 				- On incoming frame, switch records the sender's info.
 				- If destination not in switch table, it **flood** the message to every of its interfaces.
 				- Otherwise it selectively sends on just one link.
-	-
+	- Virtual LAN (VLAN)
+		-
