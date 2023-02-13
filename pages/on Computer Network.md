@@ -873,4 +873,5 @@ public:: true
 			- Duration: reserved transmission time (RTS/CTS).
 	- Blue-tooth
 		- Personal area network: within ten meters.
-		-
+		- ![image.png](../assets/image_1676295113054_0.png){:height 253, :width 531}
+		- TDM: 625
