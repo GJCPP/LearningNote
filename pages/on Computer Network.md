@@ -679,6 +679,7 @@ public:: true
 				  Then record RTT.
 		-
 - Chapter 6: Link Layer
+  collapsed:: true
 	- In this chapter:
 		- Hosts and routers are viewed as "nodes".
 		- Layer-2 packet: data frame.
@@ -834,3 +835,5 @@ public:: true
 			- Broadcast domain: where each node can reach each other by broadcast in link layer
 			- VLAN < subnet < LAN < WAN, separated by (VLAN) switch, router, gateway respectively
 			-
+- Chapter 7: Wireless and mobile network
+	-
