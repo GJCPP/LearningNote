@@ -764,5 +764,6 @@ public:: true
 							- latency
 							- one point of failure (token lost)
 	- MAC address
-		-
+		- Function
+			-
 		-
