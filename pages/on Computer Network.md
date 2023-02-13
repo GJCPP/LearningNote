@@ -729,5 +729,7 @@ public:: true
 					- nodes take turns, but nodes with more to send can take longer turns
 			- Time division multiple access (TDMA)
 				- Access to channel in "rounds".
-				-
+				- Each station gets fixed length of slot in each round.
+				- Unused slot goes idle.
+				- ![image.png](../assets/image_1676252159179_0.png)
 				-
