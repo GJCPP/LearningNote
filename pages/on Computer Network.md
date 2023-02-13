@@ -865,8 +865,7 @@ public:: true
 				- It selects an AP.
 				- Perform authentication.
 				- Then typically run DHCP to get IP address.
-			- The MAC protocol here: ((63e99e70-ca0b-4914-9b77-f240abbc5681))
-			-
+			- The MAC protocol: ((63e99e70-ca0b-4914-9b77-f240abbc5681))
 	- Blue-tooth
-		- Personal area network.
+		- Personal area network: within ten meters.
 		-
