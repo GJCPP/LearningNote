@@ -44,4 +44,6 @@
 	- Optional
 		- RTS (Request-to-send) and CTS(Clear-to-send)
 		- The sender first sends RTS, and waits for its CTS.
-		- If
+		- If sender receives CTS that is not its, it waits till it receives ACK.
+		- This is used to solve hidden terminal problem.
+		- It's optimal: if the sender is goi
