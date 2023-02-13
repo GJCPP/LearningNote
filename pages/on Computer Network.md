@@ -865,4 +865,5 @@ public:: true
 				- It selects an AP.
 				- Perform authentication.
 				- Then typically run DHCP to get IP address.
-				-
+			- The MAC protocol here: [[Carrier Sense Multiple Access]]
+			-
