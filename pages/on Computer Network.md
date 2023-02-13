@@ -827,5 +827,6 @@ public:: true
 			- Self-learning
 				- Switch table records <MAC, interface, TTL>
 				- On incoming frame, switch records the sender's info.
-				- If destination not in switch table, it
+				- If destination not in switch table, it **flood** the message to every of its interfaces.
+				- Otherwise it can
 			-
