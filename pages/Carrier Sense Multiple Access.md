@@ -23,8 +23,6 @@
 			- $\frac{1}{1+5t_{prop}/t_{tran}}$
 			- $t_{prop}$: propagation delay.
 			- $t_{tran}$: time to transmit max-size frame.
-			-
-			-
 	- **Each frame must be long enough to detect any collision**
 		- ![image.png](../assets/image_1676253547942_0.png){:height 254, :width 318}
 		- The time for transmission must be long enough to detect collision; that is, longer than 2 maximal RTT.
