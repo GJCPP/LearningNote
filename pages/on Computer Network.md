@@ -884,3 +884,6 @@ public:: true
 		- Authentication: sender and receiver want to confirm identity of each other.
 		- Message integrity: ensure message not altered without detection.
 		- Access and availability: services must be accessible and available to users
+	- RSA again
+		- ![image.png](../assets/image_1676296520785_0.png){:height 268, :width 559}
+	-
