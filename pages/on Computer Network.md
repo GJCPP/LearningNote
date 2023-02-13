@@ -707,4 +707,8 @@ public:: true
 				- old-fashioned Ethernet
 				- upstream HFC in cable-based access network
 				- 802.11 wireless LAN, 4G/4G. satellite
-		-
+		- Multiple access protocol
+			- What is it
+				- distributed algorithm that determines how nodes share channel, i.e., determine when node can transmit
+				- communication about channel sharing must use channel itself
+			- Ideal
