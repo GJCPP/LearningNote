@@ -718,5 +718,14 @@ public:: true
 					- No special node to coordinate
 					- No synchronization of clock, slot.
 				- Simple
-			-
+			- Three broad classes of multiple access protocols
+				- channel partitioning
+					- divide channel into smaller “pieces” (time slots, frequency, code)
+					- allocate piece to node for exclusive use
+				- random access
+					- channel not divided, allow collisions
+					- “recover” from collisions
+				- “taking turns”
+					- nodes take turns, but nodes with more to send can take longer turns
+			- Time division
 				-
