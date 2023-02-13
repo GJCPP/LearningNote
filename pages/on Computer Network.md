@@ -698,4 +698,13 @@ public:: true
 			- Calculate the remainder of D mod G, under $+_2$ (i.e. xor)
 			- The remainder is supposed to have $r$ bits (with leading zero), is used as EDC bits.
 			- ![C75277E2233DE47091E48348E12F1AC2.png](../assets/C75277E2233DE47091E48348E12F1AC2_1676251453301_0.png){:height 234, :width 597}
-			-
+	- Multiple access links, protocols
+		- Two types of link
+		- point-to-point
+			- point-to-point link between Ethernet switch, host
+			- PPP for dial-up access
+		- broadcast (shared wire or medium)
+			- old-fashioned Ethernet
+			- upstream HFC in cable-based access network
+			- 802.11 wireless LAN, 4G/4G. satellite
+		-
