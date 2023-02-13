@@ -709,30 +709,41 @@ public:: true
 				- 802.11 wireless LAN, 4G/4G. satellite
 		- Multiple access protocol
 			- What is it
+			  collapsed:: true
 				- distributed algorithm that determines how nodes share channel, i.e., determine when node can transmit
 				- communication about channel sharing must use channel itself
 			- Idealized goal
+			  collapsed:: true
 				- When only one node wants to transmit, it transmit at rate $R$ (full)
 				- When $N$ nodes wants, at rate $R/N$
 				- Fully decentralized
+				  collapsed:: true
 					- No special node to coordinate
 					- No synchronization of clock, slot.
 				- Simple
 			- Three broad classes of multiple access protocols
+			  collapsed:: true
 				- channel partitioning
+				  collapsed:: true
 					- divide channel into smaller “pieces” (time slots, frequency, code)
 					- allocate piece to node for exclusive use
 				- random access
+				  collapsed:: true
 					- channel not divided, allow collisions
 					- “recover” from collisions
 				- “taking turns”
+				  collapsed:: true
 					- nodes take turns, but nodes with more to send can take longer turns
-			- Time division multiple access (TDMA)
-				- Access to channel in "rounds".
-				- Each station gets fixed length of slot in each round.
-				- Unused slot goes idle.
-				- ![image.png](../assets/image_1676252159179_0.png){:height 101, :width 529}
-			- Frequency division multiple access (FDMA)
-				- Divided into different bands.
-				- ![image.png](../assets/image_1676252283184_0.png){:height 174, :width 540}
-				-
+			- Channel partitioning
+				- Time division multiple access (TDMA)
+				  collapsed:: true
+					- Access to channel in "rounds".
+					- Each station gets fixed length of slot in each round.
+					- Unused slot goes idle.
+					- ![image.png](../assets/image_1676252159179_0.png){:height 101, :width 529}
+				- Frequency division multiple access (FDMA)
+				  collapsed:: true
+					- Divided into different bands.
+					- ![image.png](../assets/image_1676252283184_0.png){:height 174, :width 540}
+					-
+			-
