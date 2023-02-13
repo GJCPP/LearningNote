@@ -1,0 +1,3 @@
+- Assuptions
+	- Frames share a same length.
+	- Time partitioned into fixed
