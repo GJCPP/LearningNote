@@ -764,9 +764,9 @@ public:: true
 							- latency
 							- one point of failure (token lost)
 	- MAC address
-		- WTH is LAN?
-			-
-			-
+		- WTF is LAN?
+			- Briefly talking, gateway separates LANs, and router separates
+			- ![image.png](../assets/image_1676257894119_0.png)
 			- c.f. [here](https://www.youtube.com/watch?v=NyZWSvSj8ek)
 		- Function
 			- "Link layer version of IP address".
