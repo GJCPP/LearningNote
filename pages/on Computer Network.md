@@ -590,17 +590,23 @@ public:: true
 					- ![image.png](../assets/image_1676200583053_0.png){:height 288, :width 477}
 					-
 - Chapter 5: Network Layer - Control Plane
+  collapsed:: true
 	- Dijkstra’s link-state routing algorithm
+	  collapsed:: true
 		- Each router broadcasts its link state information to other router
+		  collapsed:: true
 			- With appropriate implementation, its overall complexity is $O(n)$.
 		- Then each router runs Dijkstra algorithm itself.
 		- Oscillation
+		  collapsed:: true
 			- When link costs depend on traffic volume, route oscillations possible.
 			- That is, all traffic are directed to a same link, its link cost grows rapidly; then directed to another, and the old link becomes optimal again, ...
 			- How to deal with:
+			  collapsed:: true
 				- Do NOT update synchronously
 				- Instead, each router updates with a random frequency
 	- Distance Vector Algorithm
+	  collapsed:: true
 		- Based on Bellman-Ford equality: $d(x,y)=\min_{v\in N(x)} \{c_{x,v} + d(v,y)\}$
 		- Each router tells its link state to its neighbor
 		- Each router updates according to the equality.
@@ -608,6 +614,7 @@ public:: true
 		- Each router updates asynchronously for multiple rounds.
 		- If the network is stable, each router will converge to an optimal "distance vector".
 		- "Good news travels fast" "Bad news travels slow"
+		  collapsed:: true
 			- If the cost of one link goes small, soon everyone knows.
 			- ![image.png](../assets/image_1676211061409_0.png){:height 122, :width 179}
 			- Firstly, y thought that z has a path to x with cost 5 (by z->y->x).
@@ -616,26 +623,36 @@ public:: true
 			- ...
 			- It takes many rounds for z to realize that the current optimal path to x is z->x. So does y.
 	- Make routing scalable
+	  collapsed:: true
 		- Why above scheme too idealized:
+		  collapsed:: true
 			- In real Internet, their are billions of devices.
+			  collapsed:: true
 				- Can't store these info + exchanging info swamps links
 			- Administrative autonomy
+			  collapsed:: true
 				- Routers might want to control its traffic (direct it in a way that maximizes its profit)
 		- Aggregate routers into regions known as “autonomous systems” (AS) (aka "domains")
 		- Intra-AS (域内路由)
+		  collapsed:: true
 			- All routers must run the same intra-domain protocol
 			- Gateway router: at “edge” of its own AS, has link(s) to router(s) in other AS’es
 		- Inter-AS (域间路由)
+		  collapsed:: true
 			- ![image.png](../assets/image_1676212438318_0.png)
 			- OSPF
+			  collapsed:: true
 				- Open: public available, not proprietary
 				- Classic link-state routing: each router has full topology, and runs Dijkstra
 				- Security: all OSPF message authenticated
 			- BGP (Border Gateway Protocol)
+			  collapsed:: true
 				- the de facto inter-domain routing protocol
 				- BGP session: two BGP routers (“peers”) exchange BGP messages over semi-permanent TCP connection
+				  collapsed:: true
 					- ![image.png](../assets/image_1676213428258_0.png)
 				- BGP route selection:
+				  collapsed:: true
 					- (how an AS select its nearby AS to transmit a datagram)
 					- 1. To each AS, it has a preference.
 					- 2. If not 1, then it tries the shortest AS-path.
@@ -643,18 +660,25 @@ public:: true
 					- 4. Some more criteria possible.
 			- ![image.png](../assets/image_1676213717395_0.png)
 	- ICMP: Internet Control Message Protocol
+	  collapsed:: true
 		- Helps host exchange information about network layer with router.
 		- Basic function
+		  collapsed:: true
 			- error reporting: unreachable host, network, port, protocol
 			- echo request/reply (used by ping)
 		- The ICMP message is carried in IP datagram.
+		  collapsed:: true
 			- ICMP message: type, code plus first 8 bytes of IP datagram causing error
 			- ![image.png](../assets/image_1676214516591_0.png){:height 225, :width 214}
 		- Traceroute
+		  collapsed:: true
 			- Send UDP segment with TTL=1, 2,... to the destination, to a randomly chosen port (probably not open at that side).
 			- Check each returned datagram:
+			  collapsed:: true
 				- type 11: TTL expired
 				- possibly included the router's name + IP address
 				- If the segment reached the host, type 3 code 3: dest port unreachable
 				  Then record RTT.
 		-
+- Chapter 6: Link Layer
+	-
