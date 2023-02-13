@@ -727,5 +727,7 @@ public:: true
 					- “recover” from collisions
 				- “taking turns”
 					- nodes take turns, but nodes with more to send can take longer turns
-			- Time division
+			- Time division multiple access (TDMA)
+				- Access to channel in "rounds".
+				-
 				-
