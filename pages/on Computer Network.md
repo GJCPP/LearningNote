@@ -835,6 +835,7 @@ public:: true
 			- VLAN < subnet < LAN < WAN, separated by (VLAN) switch, router, gateway respectively
 			-
 - Chapter 7: Wireless and mobile network
+  collapsed:: true
 	- Wireless
 		- Difference with wired one
 			- decreased signal strength
@@ -877,3 +878,6 @@ public:: true
 		- TDM: 625\mu sec; the odd slots used by master, and even by clients.
 		- FDM: sender uses 79 frequency channels in known, pseudo-random order slot-to-slot (spread spectrum)
 		- 2.4-2.5 GHz ISM radio band
+- Chapter 8: Security
+	- Principles of security
+		-
