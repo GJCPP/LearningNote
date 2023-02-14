@@ -166,6 +166,8 @@
 - SQL: Structed Query Language
 	- 术语
 		- 基表 (base table)，即关系数据库中的关系；即表。
-		- 视图
+		- 视图 (view)，即关系子模式，也称虚表
+		- 列：属性
+		-
 	-
 -
