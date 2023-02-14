@@ -423,6 +423,9 @@
 				- 也就是$\{T\in Head(R): \exists X\subseteq R\ s.t.\ T\in X\wedge X\overset{f}{\to}Head(R)\}$
 				- 也就是$\bigcup_{X\overset{f}{\to}Head(R)}X$
 				- 一个属性是主属性，意味着它是对整体有决定作用的
-					- 也就是$Head(某个集合$X$
-				-
+					- 也就是$Head(R)$完全依赖于某个集合$X$
+					- 而它恰好是这个$X$中（不可缺少，因为是完全的）的一员。
+	- 范式
+		- 第一范式
+			-
 -
