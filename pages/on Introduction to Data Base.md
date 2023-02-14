@@ -181,6 +181,7 @@
 			  [[GROUP BY B_1, ..., B_n]
 			  [HAVING gourp_condition]]
 			  [ORDER BY C_1[ASC | DESC], C_2[ASC | DESC], ...]
+			  涉及多表的时候，可以用"table.column"来指明是哪个表的列
 			- 目标子句 SELECT，将选中的数据表投影到$\pi_{A_1, ..., A_m}()$
 				- DISTINCT 指明需要去重（虽然理论上应该自动去重，但为了效率考虑……）
 				- 除了指定列名进行投影外，还可以给入表达式，让它对对应属性做表达式后再塞进结果
