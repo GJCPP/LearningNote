@@ -175,6 +175,7 @@
 		- 数值常量不需要定界符，但字符串、日期等需要单引号标记
 	- 数据操纵
 		- 总的命令格式
+		  collapsed:: true
 			- SELECT [DISTINCT] column name list, expression
 			  FROM R
 			  [WHERE F]
@@ -193,7 +194,7 @@
 				- 如果在本次操作中对表进行了换名，则只能使用新名
 			- 条件子句 WHERE，F为条件，指定选择元组的条件$\sigma_F()$
 				- F中可以使用布尔表达式，即AND OR NOT
-			- 分组子句 GROUP BY，分组（见后例）
+			- 分组子句 GROUP BY，分组（见后）
 				- 分组查询子句 HAVING
 			- 排序输出子句 ORDER BY COL [ASC | DESC]
 				- 可以选择按多列的值排序，并为每列依次指定升/降序
@@ -211,6 +212,7 @@
 				- ![image.png](../assets/image_1676373245613_0.png){:height 254, :width 533}
 				-
 		- 比较谓词
+		  collapsed:: true
 			- 可以用在WHERE中
 			- [NOT] BETWEEN ... AND ...
 				- 值在两者之间；两者都包含
@@ -231,6 +233,7 @@
 				- 据说直接写"column = NULL"再某些数据库里会出错
 				- 但是这个语句却都是支持的
 		- 分层查询 / 嵌套查询
+		  collapsed:: true
 			- 可以把在WHERE中嵌入SELECT
 				- 当然，可能更好的做法是先保存一下中间结果（视图，view）（如果是独立子查询）
 			- 可行的操作有：
@@ -256,6 +259,7 @@
 					- Hard
 				- ![image.png](../assets/image_1676377178573_0.png){:height 350, :width 508}
 		- 子查询间的运算
+		  collapsed:: true
 			- <子查询1> OPERATOR [ALL] <子查询2>
 			- OPERATOR：可选择并交差，UNION / INTERSECT / EXCEPT
 			- ALL：不去重
@@ -277,6 +281,9 @@
 			- 如果能确定子查询中只有一条，也可以省去ALL
 			- （不要作死冒这个险；不如别省）
 		- 例子
+		  collapsed:: true
 			- ![image.png](../assets/image_1676378141113_0.png){:height 389, :width 529}
 			- ![image.png](../assets/image_1676378424232_0.png){:height 433, :width 526}
 			-
+	- 分组查询
+		-
