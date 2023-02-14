@@ -328,4 +328,7 @@
 			- ![image.png](../assets/image_1676382468554_0.png){:height 197, :width 467}
 			- ![image.png](../assets/image_1676382484035_0.png){:height 207, :width 463}
 			-
-	-
+	- 视图（view）
+		- 又是不知道考不考的东西？
+		- 视图就是“只看你想看的”，from certain point of "view"
+		-
