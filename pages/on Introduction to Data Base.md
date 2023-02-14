@@ -249,5 +249,6 @@
 				- ![image.png](../assets/image_1676374146908_0.png){:height 299, :width 512}
 				  collapsed:: true
 					- 这个也可以用联接做。
+				- ![image.png](../assets/image_1676375643362_0.png){:height 365, :width 509}
 				-
 -
