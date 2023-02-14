@@ -137,5 +137,7 @@
 			- 2. $\varphi_1 \wedge\varphi_2$, $\varphi_1 \vee\varphi_2$, $\varphi_1 \to\varphi_2$, $\neg \varphi_1$, 其中各$\varphi$为公式
 			- 3. 若$\varphi$为公式且有自由变元$r$，则$\exists r(\varphi)$, $\forall r(\varphi)$.
 			- 4. 公式仅限于此
-			-
+			- （谓词逻辑）
+	- 关系演算中，应当仅有目标属性为自由变元
+	-
 -
