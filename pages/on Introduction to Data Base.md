@@ -310,7 +310,10 @@
 		- 删除
 			- DELETE FROM table_name
 			  [WHERE search_condition]
-			- 删除满足条件的所有元组
+			- 删除满足条件的所有元组；省略WHERE就删除所有元组（不是删除表）
+			- WHERE里可以塞入子查询
+			- ![image.png](../assets/image_1676382239270_0.png)
+			-
 		- 插入
 			- INSERT INTO table_name [(colname, colname, ...)]
 			  VALUES (expr | NULL, expr | NULL, ...)
