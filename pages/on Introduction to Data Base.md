@@ -181,10 +181,11 @@
 			  [[GROUP BY B_1, ..., B_n]
 			  [HAVING gourp_condition]]
 			  [ORDER BY C_1[ASC | DESC], C_2[ASC | DESC], ...]
-			- 目标子句 SELECT， 将选中的数据表投影到$\pi_{A_1, ..., A_m}()$
-			- 范围子句 FROM -> 指定访问哪个关系；**若多个（以逗号分隔）则自动作笛卡尔积**
-			- 条件子句 WHERE -> F为条件，指定选择元组的条件$\sigma_F()$
-			- 分组子句 GROUP BY -> 分组
-				- 分组查询子句 HAVING ->
+			- 目标子句 SELECT，将选中的数据表投影到$\pi_{A_1, ..., A_m}()$
+			- 范围子句 FROM，指定访问哪个关系；**若多个（以逗号分隔）则自动作笛卡尔积**
+			- 条件子句 WHERE，F为条件，指定选择元组的条件$\sigma_F()$
+			- 分组子句 GROUP BY，分组（见后例）
+				- 分组查询子句 HAVING
+			- 排序输出子句 ORDER BY，可以选择
 	-
 -
