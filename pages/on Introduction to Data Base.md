@@ -246,5 +246,6 @@
 				- 相关子查询由外到内，退化成两层循环。
 			- 例子
 				- ![image.png](../assets/image_1676374119935_0.png){:height 187, :width 512}
+				- ![image.png](../assets/image_1676374146908_0.png){:height 299, :width 512}
 				-
 -
