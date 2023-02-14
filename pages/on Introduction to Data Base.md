@@ -327,5 +327,6 @@
 			  [WHERE search_condition]
 			- 如果使用subquery，只能返回一个元组
 			- ![image.png](../assets/image_1676382468554_0.png){:height 197, :width 467}
+			- ![image.png](../assets/image_1676382484035_0.png){:height 207, :width 463}
 			-
 	-
