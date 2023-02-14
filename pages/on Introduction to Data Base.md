@@ -334,4 +334,5 @@
 		- CREATE VIEW view_name [(col_name, ...)]
 		  AS <映像语句> [WITH CHECK OPTION]
 		- <映像语句>就是SELECT那些，上面见了一大堆的那种。
-		- 如果写了
+		- 如果写了"WITH CHECK OPTION"，则在视图上执行更新时，结果必须仍在视图里
+			- 也就是结果不能让视图中的某一元组不见了
