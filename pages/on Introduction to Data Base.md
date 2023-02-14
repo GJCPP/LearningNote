@@ -143,7 +143,7 @@
 		- $R\cup S=R(p) \vee S(p)$
 		- $R-S=R(p)\wedge\neg S(p)$
 		- $\sigma_F(R)=R(p)\wedge F$
-			- 如$$$$
+			- 如$F=A_1\wedge A_2$，则$R(p)\wedge (p(A_1)=p(A_2))$
 		- $R\times S=R(p)\wedge S(q)$，注意是与操作。
 		- $R\underset{F}{\Join} S=R(p)\wedge S(q)\wedge F$
 		- $R\Join S=R(x,y)\wedge S(y,z)$，通过（所有的）公共属性/变元来实现自然联接
