@@ -98,5 +98,8 @@
 				- 转换：$\sigma_F(R\times S)$
 				- ![image.png](../assets/image_1676364284223_0.png){:height 299, :width 412}
 			- 自然联接 $R\Join S$
-				- 依据两者同名属性
+				- 依据两者同名属性拼接
+				- 转换
+					- 设两者的公共属性为$A_1, ..., A_k$
+					- 等价于$\sigma_{R.A_1=S.}
 -
