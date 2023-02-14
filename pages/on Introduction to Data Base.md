@@ -306,4 +306,6 @@
 			  VALUES (expr | NULL, expr | NULL, ...)
 			  | SUBQUERY
 			- 第一行指明表的属性顺序；若不填则按定义表时的顺序
+			- 第二行给入的VALUES需要与第一行一致
+			- 如果使用SUBQUERY而非第二行，则将子查询的结果插入表中
 			-
