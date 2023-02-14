@@ -254,5 +254,6 @@
 				- ![image.png](../assets/image_1676377100539_0.png){:height 319, :width 508}
 				  collapsed:: true
 					- Hard
+				- ![image.png](../assets/image_1676377178573_0.png){:height 350, :width 508}
 				-
 -
