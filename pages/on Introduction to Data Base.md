@@ -105,7 +105,9 @@
 					- 等价于$\pi_{B_1, ..., B_n}(\sigma_{R.A_1=S.A_1, ..., R.A_k=S.A_k}(R\times S))$
 				- ![image.png](../assets/image_1676364482744_0.png){:height 208, :width 432}
 			- 外联结
-				- 哪边有两杠，则**那边必须全进入结果（如果不存在拼接就在另一侧塞空置）**
+				- 哪边有两杠，则**那边必须全进入结果（如果不存在可行拼接就在另一侧塞空值）**
 				- ![image.png](../assets/image_1676364507417_0.png){:height 209, :width 242}
 				- ![image.png](../assets/image_1676364527421_0.png){:height 326, :width 428}
+			- 除运算 $R/S$
+				- $R$中的元组，必须拥有
 -
