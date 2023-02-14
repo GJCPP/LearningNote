@@ -109,5 +109,7 @@
 				- ![image.png](../assets/image_1676364507417_0.png){:height 209, :width 242}
 				- ![image.png](../assets/image_1676364527421_0.png){:height 326, :width 428}
 			- 除运算 $R/S$
-				- $R$中的元组，必须拥有
+				- $R$中的元组，必须拥有$S$指定的所有属性值，才能被保留。
+				- 运算条件：$Head(S)\subset Head(R)$
+				-
 -
