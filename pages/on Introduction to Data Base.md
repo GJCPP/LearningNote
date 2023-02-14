@@ -57,6 +57,7 @@
 	- 表相容 (compatible)
 		- 表R与表S相容 <=> head(R)=head(S) 且具有相同语义
 - 关系操纵
+  collapsed:: true
 	- **注意所有运算都是去重的：重复在数据表里时没意义的**
 	- 基础运算
 		- 赋值运算 $R\coloneqq$ <expression>
@@ -108,12 +109,14 @@
 				- 哪边有两杠，则**那边必须全进入结果（如果不存在可行拼接就在另一侧塞空值）**
 				- ![image.png](../assets/image_1676364507417_0.png){:height 209, :width 242}
 				- ![image.png](../assets/image_1676364527421_0.png){:height 326, :width 428}
-			- 除运算 $R/S$
-				- $R$中的元组，必须拥有$S$指定的所有属性值，才能被保留。
-				- 运算条件：$Head(S)\subset Head(R)$
-				- 转换
-					- 假设$Head(R)=\{A_1, ..., A_n, B_1, ..., B_k\}$
-					- 假设$Head(S) = \{B_1, ..., B_k\}$
-					- $R/S = \pi_{A_1, ..., A_n}(R)-\pi_{A_1, ..., A_n}(\pi_{A_1, ..., A_n}(R)\times S- R)$
-				-
+		- 除运算 $R/S$
+			- $R$中的元组，必须拥有$S$指定的所有属性值，才能被保留。
+			- 运算条件：$Head(S)\subset Head(R)$
+			- 转换
+				- 假设$Head(R)=\{A_1, ..., A_n, B_1, ..., B_k\}$
+				- 假设$Head(S) = \{B_1, ..., B_k\}$
+				- $R/S = \pi_{A_1, ..., A_n}(R)-\pi_{A_1, ..., A_n}(\pi_{A_1, ..., A_n}(R)\times S- R)$
+			- ![image.png](../assets/image_1676364872293_0.png){:height 325, :width 433}
+- 关系演算（基于谓词）
+	-
 -
