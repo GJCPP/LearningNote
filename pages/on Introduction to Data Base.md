@@ -332,4 +332,5 @@
 		- 又是不知道考不考的东西？
 		- 视图就是“只看你想看的”，from certain point of "view"
 		- CREATE VIEW view_name [(col_name, ...)]
-		  AS SELECT
+		  AS <映像语句> [WITH CHECK OPTION]
+		-
