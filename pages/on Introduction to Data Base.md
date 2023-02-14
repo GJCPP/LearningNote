@@ -194,7 +194,9 @@
 				- F中可以使用布尔表达式，即AND OR NOT
 			- 分组子句 GROUP BY，分组（见后例）
 				- 分组查询子句 HAVING
-			- 排序输出子句 ORDER BY，可以选择按多列的值排序，并为每列依次指定升(ASC)/降(DESC)序
+			- 排序输出子句 ORDER BY
+				- 可以选择按多列的值排序，并为每列依次指定升/降序
+				- ascending /
 			- 例
 				- ![image.png](../assets/image_1676372333362_0.png){:height 209, :width 529}
 				- ![image.png](../assets/image_1676372789598_0.png){:height 155, :width 533}
