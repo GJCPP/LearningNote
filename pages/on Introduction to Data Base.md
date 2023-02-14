@@ -202,7 +202,7 @@
 			- 可以用在WHERE中
 			- BETWEEN ... AND ... 值在两者之间；两者都包含
 			- NOT BETWEEN ... AND ...
-			- LIKE / NOT LIKE
+			- [NOT] LIKE
 				- 使用：column [NOT] LIKE val1 [ESCAPE val2]
 				- 低配版正则，用来匹配字符串（字符串记得加单引号）
 				- 模式(pattern) val1
@@ -211,6 +211,8 @@
 				- 转义指示字符 val2
 					- 紧跟在val2后的下划线/百分号表示对应字符本身，而不再是通配符
 				- 例子
-					- ![image.png](../assets/image_1676372872532_0.png)
+					- ![image.png](../assets/image_1676372872532_0.png){:height 159, :width 517}
+					- ![image.png](../assets/image_1676372901326_0.png){:height 159, :width 514}
+					-
 	-
 -
