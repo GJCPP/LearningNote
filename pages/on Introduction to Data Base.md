@@ -178,6 +178,8 @@
 			- SELECT A_1, ..., A_m
 			  FROM R
 			  WHERE F
-			- SELECT -> 投影
+			- SELECT -> 将选中的数据表投影到$\pi_{A_1, ..., A_m}()$
+			- FROM -> 指定访问哪个关系；**若多个（以逗号分隔）则自动作笛卡尔积**
+			- WHERE ->
 	-
 -
