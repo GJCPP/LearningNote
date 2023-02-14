@@ -333,4 +333,5 @@
 		- 视图就是“只看你想看的”，from certain point of "view"
 		- CREATE VIEW view_name [(col_name, ...)]
 		  AS <映像语句> [WITH CHECK OPTION]
-		-
+		- <映像语句>就是SELECT那些，上面见了一大堆的那种。
+		- 如果写了
