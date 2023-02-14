@@ -296,5 +296,10 @@
 		- GROUP BY会自动分组，依次按照给入的列名为第一二三关键字、升序
 			- 我劝你还是老实写ORDER BY（笑）
 	- 元组删除、插入、修改
+		- 这个可能不是重点，也可能不是考点；但是也比较简单
 		- 删除
-			- DE
+			- DELETE FROM table_name
+			  [WHERE search_condition]
+			- 删除满足条件的所有元组
+		- 插入
+			- INSERT INTO table_name [(colname]
