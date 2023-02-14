@@ -140,7 +140,10 @@
 			- （谓词逻辑）
 	- 关系演算中，应当仅有目标属性为自由变元
 	- 关系操纵的表示
-		- $R\cup S=R(p) \wedge $
+		- $R\cup S=R(p) \vee S(p)$
+		- $R-S=R(p)\wedge\neg S(p)$
+		- $\sigma_F(R)=R(p)\wedge F$
+			- 如$$$$
 		- $R\times S=R(p)\wedge S(q)$，注意是与操作。
 		- $R\underset{F}{\Join} S=R(p)\wedge S(q)\wedge F$
 		- $R\Join S=R(x,y)\wedge S(y,z)$，通过（所有的）公共属性/变元来实现自然联接
