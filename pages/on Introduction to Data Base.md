@@ -410,5 +410,6 @@
 				- 合并：$X\to Y, X\to Z\implies X\to YZ$
 				- 伪传递：$X\to Y, WY\to Z\implies WX\to Z$
 		- 依赖集闭包
-			- $F\models
+			- 设$F$是一个依赖的集合，也就是由一堆"X\to Y"组成的集合。
+			- 则记$F\models X\to Y$，倘若$X\to Y$可以
 -
