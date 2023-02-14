@@ -256,5 +256,9 @@
 					- Hard
 				- ![image.png](../assets/image_1676377178573_0.png){:height 350, :width 508}
 		- 子查询间的运算
-			- <子查询1> <OP
+			- <子查询1> OPERATOR [ALL] <子查询2>
+			- OPERATOR：可选择并交差，UNION / INTERSECT / EXCEPT
+			- ALL：不去重
+			- ![image.png](../assets/image_1676377319601_0.png)
+			-
 -
