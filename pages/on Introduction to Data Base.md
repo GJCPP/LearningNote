@@ -142,5 +142,5 @@
 	- 关系操纵的表示
 		- ![C30181F32626F5FB5BC0D33464DBC97F.png](../assets/C30181F32626F5FB5BC0D33464DBC97F_1676366075391_0.png)
 		- **其实应该写**$R\cup S=R(t)\vee S(t)$**的；就是不用显式声明变量或集合。**
-		-
+		- $R\times S=R(p)\wedge S(q)$
 -
