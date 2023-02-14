@@ -410,5 +410,5 @@
 				- 合并：$X\to Y, X\to Z\implies X\to YZ$
 				- 伪传递：$X\to Y, WY\to Z\implies WX\to Z$
 		- 依赖集闭包
-			- $F\
+			- $F\models
 -
