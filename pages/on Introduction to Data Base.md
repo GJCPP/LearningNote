@@ -321,4 +321,4 @@
 			- 第二行给入的VALUES需要与第一行一致
 			- 如果使用SUBQUERY而非第二行，则将子查询的结果插入表中
 			- ![image.png](../assets/image_1676382271673_0.png){:height 104, :width 468}
-		-
+		- 修改
