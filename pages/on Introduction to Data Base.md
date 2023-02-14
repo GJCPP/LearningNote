@@ -261,6 +261,8 @@
 			- ALL：不去重
 			- 例子
 				- ![image.png](../assets/image_1676377319601_0.png){:height 162, :width 534}
-				- 关于上面那个S4hard问题的骚操作
-					-
+				- 关于上面那个S4-hard问题的骚操作
+					- ![FEF85B3468FDE1C1059322BD005AE876.png](../assets/FEF85B3468FDE1C1059322BD005AE876_1676377805115_0.png){:height 299, :width 535}
+	- 统计功能
+		-
 -
