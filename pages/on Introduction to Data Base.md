@@ -113,6 +113,7 @@
 				- 运算条件：$Head(S)\subset Head(R)$
 				- 转换
 					- 假设$Head(R)=\{A_1, ..., A_n, B_1, ..., B_k\}$
-					- 假设$Head
-					- $\pi_{A_1, ..., A_n}(R)-$
+					- 假设$Head(S) = \{B_1, ..., B_k\}$
+					- $R/S = \pi_{A_1, ..., A_n}(R)-\pi_{A_1, ..., A_n}(\pi_{A_1, ..., A_n}(R)\times S- R$
+					-
 -
