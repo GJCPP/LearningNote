@@ -233,5 +233,10 @@
 			- 可以把在WHERE中嵌入SELECT
 				- 当然，可能更好的做法是先保存一下中间结果（视图，view）
 			- 可行的操作有：
+				- expr [NOT] IN (subquery)
+				- expr \theta SOME|ANY|ALL (subquery)
+					- “
+					- 例如，233 < ALL (subquery)
+				- [NOT] EXISTS (subquery)
 			-
 -
