@@ -198,9 +198,11 @@
 			- 例
 				- ![image.png](../assets/image_1676372333362_0.png){:height 209, :width 529}
 				- ![image.png](../assets/image_1676372789598_0.png){:height 155, :width 533}
-				- ![image.png](../assets/image_1676373174106_0.png)
+				- ![image.png](../assets/image_1676373174106_0.png){:height 234, :width 534}
 				  collapsed:: true
 					- 也就是先自然联结再选出DATABASE
+				- ![image.png](../assets/image_1676373245613_0.png){:height 254, :width 533}
+				-
 		- 比较谓词
 			- 可以用在WHERE中
 			- [NOT] BETWEEN ... AND ...
