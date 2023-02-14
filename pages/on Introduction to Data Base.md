@@ -361,4 +361,5 @@
 		- ![image.png](../assets/image_1676383319353_0.png){:height 338, :width 472}
 		  collapsed:: true
 			- 这一操作会让12+4>15，从而导致一行跑出视图外，因此被拒绝。
+- 规范化设计理论
 -
