@@ -278,4 +278,5 @@
 			- （不要作死冒这个险；不如别省）
 		- 例子
 			- ![image.png](../assets/image_1676378141113_0.png){:height 389, :width 529}
+			- ![image.png](../assets/image_1676378424232_0.png){:height 433, :width 526}
 			-
