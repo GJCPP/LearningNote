@@ -74,9 +74,11 @@
 		- 并运算 $R\cup S$
 			- 要求$R$与$S$是同类关系，也即表框架相同+值域相同
 			- 然后合并去重
-			- ![D8AA2CC6C78341B491DCAC6836BA1AAF.png](../assets/D8AA2CC6C78341B491DCAC6836BA1AAF_1676363063216_0.png)
+			- ![D8AA2CC6C78341B491DCAC6836BA1AAF.png](../assets/D8AA2CC6C78341B491DCAC6836BA1AAF_1676363063216_0.png){:height 171, :width 431}
 		- 差运算 $R-S$
 			- 也要求是同类关系
 			- 集合的差运算
-			-
+			- ![B936A2BB1242A80ED94EB92DDA181F5C.png](../assets/B936A2BB1242A80ED94EB92DDA181F5C_1676363068506_0.png){:height 194, :width 433}
+	- 扩充运算（均可有基础运算表达）
+		-
 -
