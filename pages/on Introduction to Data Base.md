@@ -420,5 +420,6 @@
 				- 也就是$X$不能再决定自身之外的任何属性了。
 			- 主属性集
 				- 由所有关键字中的属性构成的集合
-				- 也就是$\{T\in Head(R): \exists X\subseteq R \st X\}$
+				- 也就是$\{T\in Head(R): \exists X\subseteq R\ s.t.\ T\in X\wedge X\overset{f}{\to}Head(R)\}$
+				- 也就是$\big$
 -
