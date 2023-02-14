@@ -191,5 +191,9 @@
 			- 排序输出子句 ORDER BY，可以选择按多列的值排序，并为每列依次指定升(ASC)/降(DESC)序
 		- 比较谓词
 			- 可以用在WHERE中
+			- BETWEEN ... AND ... 值在两者之间
+			- NOT BETWEEN ... AND ...
+			- LIKE / NOT LIKE
+				-
 	-
 -
