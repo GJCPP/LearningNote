@@ -312,8 +312,7 @@
 			  [WHERE search_condition]
 			- 删除满足条件的所有元组；省略WHERE就删除所有元组（不是删除表）
 			- WHERE里可以塞入子查询
-			- ![image.png](../assets/image_1676382239270_0.png)
-			-
+			- ![image.png](../assets/image_1676382239270_0.png){:height 312, :width 489}
 		- 插入
 			- INSERT INTO table_name [(colname, colname, ...)]
 			  VALUES (expr | NULL, expr | NULL, ...)
@@ -321,4 +320,5 @@
 			- 第一行指明表的属性顺序；若不填则按定义表时的顺序
 			- 第二行给入的VALUES需要与第一行一致
 			- 如果使用SUBQUERY而非第二行，则将子查询的结果插入表中
-			-
+			- ![image.png](../assets/image_1676382271673_0.png){:height 104, :width 468}
+		-
