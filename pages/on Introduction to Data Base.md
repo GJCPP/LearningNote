@@ -194,6 +194,8 @@
 			- BETWEEN ... AND ... 值在两者之间
 			- NOT BETWEEN ... AND ...
 			- LIKE / NOT LIKE
-				-
+				- 使用：column [NOT] LIKE val1 [ESCAPE val2]
+				- 模式(pattern) val1
+					- 下划线
 	-
 -
