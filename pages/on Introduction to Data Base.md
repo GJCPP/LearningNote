@@ -160,6 +160,6 @@
 		  collapsed:: true
 			- S->学生 || C->课程 || SC->选课记录
 		- ![image.png](../assets/image_1676367449339_0.png){:height 96, :width 512}
-		- ![image.png](../assets/image_1676368044339_0.png)
+		- ![image.png](../assets/image_1676368044339_0.png){:height 252, :width 515}
 		- 更多的示例去看自己的作业
 -
