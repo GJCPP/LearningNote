@@ -1,5 +1,6 @@
 - 简单的考点整理
 - 实体-联系模型（Entity-Relationship, E-R）
+  collapsed:: true
 	- 核心概念：实体，属性，联系
 	- 实体用方框，属性用圆圈，联系用菱形表示
 	- 属性有实体的，也有联系上的
@@ -34,5 +35,8 @@
 			- N：多值参与
 		- 如果你考虑关系是一条边，ER是二分图的两个部，其中若干的点是实体
 		  那么min-card(E,R)是对E中点度数的下界，max-card是上界。
+	- 来一个big example
+	  collapsed:: true
+		- ![image.png](../assets/image_1676361813108_0.png)
+- 关系数据结构
 	-
--
