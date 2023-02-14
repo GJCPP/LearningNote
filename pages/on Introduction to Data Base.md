@@ -154,13 +154,12 @@
 		- $R\underset{F}{\Join} S=R(p)\wedge S(q)\wedge F$
 		- $R\Join S=R(x,y)\wedge S(y,z)$，通过（所有的）公共属性/变元来实现自然联接
 		- $R/S=\forall y_1, ..., y_m(S(y_1, ..., y_m)\to R(x_1, ..., x_n, y_1, ..., y_m))$
-			- 表达式中$x_1, ..., x_n$是（能透到外面来的）的自由变元
-			-
+			- 表达式中$x_1, ..., x_n$是（能透到外面来的）的自由变元，因此结果即这些变元的元组们。
 	- 示例
 		- ![image.png](../assets/image_1676367387810_0.png){:height 151, :width 518}
 		  collapsed:: true
 			- S->学生 || C->课程 || SC->选课记录
 		- ![image.png](../assets/image_1676367449339_0.png){:height 96, :width 512}
-		-
+		- ![image.png](../assets/image_1676368044339_0.png)
 		- 更多的示例去看自己的作业
 -
