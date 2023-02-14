@@ -191,6 +191,7 @@
 				- 比如你可能希望引用一个表两次
 				- 如果在本次操作中对表进行了换名，则只能使用新名
 			- 条件子句 WHERE，F为条件，指定选择元组的条件$\sigma_F()$
+				-
 			- 分组子句 GROUP BY，分组（见后例）
 				- 分组查询子句 HAVING
 			- 排序输出子句 ORDER BY，可以选择按多列的值排序，并为每列依次指定升(ASC)/降(DESC)序
@@ -215,6 +216,9 @@
 				- 例子
 					- ![image.png](../assets/image_1676372872532_0.png){:height 159, :width 517}
 					- ![image.png](../assets/image_1676372901326_0.png){:height 159, :width 514}
-					-
+			- IS [NOT] NULL
+				- 据说直接写"column = NULL"再某些数据库里会出错
+				- 但是这个语句却都是支持的
+		-
 	-
 -
