@@ -191,14 +191,15 @@
 				- 比如你可能希望引用一个表两次
 				- 如果在本次操作中对表进行了换名，则只能使用新名
 			- 条件子句 WHERE，F为条件，指定选择元组的条件$\sigma_F()$
-				-
+				- F中可以使用布尔表达式，即AND OR NOT
 			- 分组子句 GROUP BY，分组（见后例）
 				- 分组查询子句 HAVING
 			- 排序输出子句 ORDER BY，可以选择按多列的值排序，并为每列依次指定升(ASC)/降(DESC)序
 			- 例
 				- ![image.png](../assets/image_1676372333362_0.png){:height 209, :width 529}
 				- ![image.png](../assets/image_1676372789598_0.png){:height 155, :width 533}
-				-
+				- ![image.png](../assets/image_1676373174106_0.png)
+					-
 		- 比较谓词
 			- 可以用在WHERE中
 			- [NOT] BETWEEN ... AND ...
