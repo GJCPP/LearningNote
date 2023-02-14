@@ -195,7 +195,11 @@
 			- NOT BETWEEN ... AND ...
 			- LIKE / NOT LIKE
 				- 使用：column [NOT] LIKE val1 [ESCAPE val2]
+				- 低配版正则，用来匹配字符串（字符串记得加单引号）
 				- 模式(pattern) val1
-					- 下划线
+					- 下划线(_)：匹配任意一个字符
+					- 百分号(%)：匹配任意一个字符串，包括空串
+				- 转义指示字符 val2
+					- 紧跟在val2后的
 	-
 -
