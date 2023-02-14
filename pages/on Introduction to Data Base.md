@@ -411,5 +411,8 @@
 				- 伪传递：$X\to Y, WY\to Z\implies WX\to Z$
 		- 依赖集闭包
 			- 设$F$是一个依赖的集合，也就是由一堆"X\to Y"组成的集合。
-			- 则记$F\models X\to Y$，倘若$X\to Y$可以
+			- 则记$F\models X\to Y$，倘若$X\to Y$可以经由规则，从$F$中的依赖推导而出。
+			- 则记$F^+ =\{X\to Y: F\models X\to Y\}$
+		- 属性集闭包
+			- 设$X\subseteq Head(R)$是
 -
