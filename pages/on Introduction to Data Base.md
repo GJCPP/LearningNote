@@ -130,7 +130,7 @@
 	- 定义：关系演算公式
 		- 关系演算原子公式为如下之一
 			- 1. 谓词$R(t)$
-			- 2. $u(i)\ \theta\ v(j)$，其中$\theta$为$<, \leq, >, \geq$之一
+			- 2. $u(i)\ \theta\ v(j)$，其中$\theta$为$<, \leq, >, \geq, =, \neq$之一
 			- 3. $u(i)\ \theta\ a$，其中$a$为常数
 		- 关系演算公式为如下之一
 			- 1. 原子公式
@@ -235,7 +235,8 @@
 			- 可行的操作有：
 				- expr [NOT] IN (subquery)
 				- expr \theta SOME|ANY|ALL (subquery)
-					- “
+					- “比集合中的某些/任何/所有值都要\theta”；
+					- 当然，\theta还是取那几个比较符号
 					- 例如，233 < ALL (subquery)
 				- [NOT] EXISTS (subquery)
 			-
