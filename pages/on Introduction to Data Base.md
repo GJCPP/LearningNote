@@ -198,6 +198,9 @@
 				- 可以选择按多列的值排序，并为每列依次指定升/降序
 				- Ascending / Descending
 				- 缺省为升序
+				- 例
+					- ![image.png](../assets/image_1676373492186_0.png){:height 211, :width 542}
+					-
 			- 例
 				- ![image.png](../assets/image_1676372333362_0.png){:height 209, :width 529}
 				- ![image.png](../assets/image_1676372789598_0.png){:height 155, :width 533}
