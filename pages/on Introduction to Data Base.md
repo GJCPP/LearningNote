@@ -302,4 +302,8 @@
 			  [WHERE search_condition]
 			- 删除满足条件的所有元组
 		- 插入
-			- INSERT INTO table_name [(colname]
+			- INSERT INTO table_name [(colname, colname, ...)]
+			  VALUES (expr | NULL, expr | NULL, ...)
+			  | SUBQUERY
+			- 第一行指明表的属性顺序；若不填则按定义表时的顺序
+			-
