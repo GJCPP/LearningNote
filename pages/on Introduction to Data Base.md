@@ -264,5 +264,8 @@
 				- 关于上面那个S4-hard问题的骚操作
 					- ![FEF85B3468FDE1C1059322BD005AE876.png](../assets/FEF85B3468FDE1C1059322BD005AE876_1676377805115_0.png){:height 299, :width 535}
 	- 统计功能
-		-
+		- COUNT
+			- COUNT(*) 返回元组个数
+			- COUNT(col_name) 返回该列非空元素个数
+			- COUNT(
 -
