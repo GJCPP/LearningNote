@@ -62,8 +62,9 @@
 		- 赋值运算 $R\coloneqq$ <expression>
 			- 用来保存中间结果
 			- 在新表中，可以采用“原来表.原来属性”的方法表示属性
-			- 如$R(A_1, A_2)$与$S(A_2, A_3$，$T\coloneqq R\times S$
-			- 则可以说$T$
+				- 如$R(A_1, A_2)$与$S(A_2, A_3)$，$T\coloneqq R\times S$
+				- 则可以说$T$中有属性$R.A_1, R.A_2, S.A_2, S.A_3$.（如果可以，可以自然联结而非
+				-
 			- ![image.png](../assets/image_1676363464725_0.png)
 		- 选择运算$\sigma_F(R)$
 			- 依照条件$F$从$R$中选出满足的元组。
