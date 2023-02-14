@@ -235,9 +235,10 @@
 			- 可行的操作有：
 				- expr [NOT] IN (subquery)
 				- expr \theta SOME|ANY|ALL (subquery)
-					- “比集合中的某些/任何/所有值都要\theta”；
+					- “比集合中的某些/任何/所有值都要\theta”；SOME似乎与ANY同义
 					- 当然，\theta还是取那几个比较符号
 					- 例如，233 < ALL (subquery)
 				- [NOT] EXISTS (subquery)
-			-
+			- 独立子查询
+				- 有些子查询只需要
 -
