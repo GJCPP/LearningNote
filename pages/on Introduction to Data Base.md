@@ -236,7 +236,6 @@
 		- 分层查询 / 嵌套查询
 		  collapsed:: true
 			- 可以把在WHERE中嵌入SELECT
-				- 当然，可能更好的做法是先保存一下中间结果（视图，view）（如果是独立子查询）
 			- 可行的操作有：
 				- expr [NOT] IN (subquery)
 				- expr \theta SOME|ANY|ALL (subquery)
