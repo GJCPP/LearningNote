@@ -154,6 +154,9 @@
 		- $R\underset{F}{\Join} S=R(p)\wedge S(q)\wedge F$
 		- $R\Join S=R(x,y)\wedge S(y,z)$，通过（所有的）公共属性/变元来实现自然联接
 	- 示例
+		- ![image.png](../assets/image_1676367387810_0.png){:height 151, :width 518}
+		  collapsed:: true
+			- S->学生 || C->课程 || SC->选课记录
 		-
 		- 更多的示例去看自己的作业
 -
