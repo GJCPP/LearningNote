@@ -347,4 +347,6 @@
 			- 这样的视图称为可更新视图(updatable view)
 			- 更新操作将会被对应到基表上
 		- ![image.png](../assets/image_1676382997937_0.png){:height 141, :width 479}
+		- ![image.png](../assets/image_1676383296998_0.png){:height 333, :width 477}
+		- ![image.png](../assets/image_1676383319353_0.png)
 		-
