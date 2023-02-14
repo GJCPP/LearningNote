@@ -187,7 +187,7 @@
 				- 可以用星号(*)代表表中所有列名
 				- 可以对结果重命名：<column expression> AS <colname>
 			- 范围子句 FROM，指定访问哪个关系；**若多个（以逗号分隔）则自动作笛卡尔积**
-				- 别名：<table name> <alias name>
+				- 别名：<table name> [AS] <alias name>，AS可以省略
 				- 比如你可能希望引用一个表两次
 				- 如果在本次操作中对表进行了换名，则只能使用新名
 			- 条件子句 WHERE，F为条件，指定选择元组的条件$\sigma_F()$
@@ -199,7 +199,8 @@
 				- ![image.png](../assets/image_1676372333362_0.png){:height 209, :width 529}
 				- ![image.png](../assets/image_1676372789598_0.png){:height 155, :width 533}
 				- ![image.png](../assets/image_1676373174106_0.png)
-					-
+				  collapsed:: true
+					- 也就是先自然联结再选出DATABASE
 		- 比较谓词
 			- 可以用在WHERE中
 			- [NOT] BETWEEN ... AND ...
