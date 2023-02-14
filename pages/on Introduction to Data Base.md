@@ -400,13 +400,15 @@
 	- Armstrong公理系统
 		- 这是在只考虑最基础的那个函数依赖时说的。
 		- 当这家伙写下"$\to$"的时候，他当然想说的是数理逻辑里那个"蕴含"。
-		- 基本规则
-			- 自反：$Y\subseteq X\implies X\to Y$
-			- 增广：$X\to Y\implies XZ\to YZ$
-			- 传递：$X\to Y,Y\to Z \implies X\to Z$
-		- 扩充规则
-			- 分解：$X\to YZ\implies X\to Y, X\to Z$
-			- 合并：$X\to Y, X\to Z\implies X\to YZ$
-			- 伪传递：$X\to Y, WY\to Z\implies WX\to Z$
-		-
+		- 规则
+			- 基本规则
+				- 自反：$Y\subseteq X\implies X\to Y$
+				- 增广：$X\to Y\implies XZ\to YZ$
+				- 传递：$X\to Y,Y\to Z \implies X\to Z$
+			- 扩充规则
+				- 分解：$X\to YZ\implies X\to Y, X\to Z$
+				- 合并：$X\to Y, X\to Z\implies X\to YZ$
+				- 伪传递：$X\to Y, WY\to Z\implies WX\to Z$
+		- 依赖集闭包
+			- $F\
 -
