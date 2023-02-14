@@ -163,6 +163,9 @@
 		- ![image.png](../assets/image_1676368044339_0.png){:height 252, :width 515}
 		- ![image.png](../assets/image_1676370637344_0.png){:height 288, :width 518}
 		- 更多的示例去看自己的作业
-- SQL
+- SQL: Structed Query Language
+	- 术语
+		- 基表 (base table)，即关系数据库中的关系；即表。
+		- 视图
 	-
 -
