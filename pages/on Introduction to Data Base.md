@@ -175,7 +175,7 @@
 		- 数值常量不需要定界符，但字符串、日期等需要单引号标记
 	- 数据操纵
 		- 总的命令格式
-			- SELECT [DISTINCT] A_1, ..., A_m
+			- SELECT [DISTINCT] column name list 
 			  FROM R
 			  [WHERE F]
 			  [[GROUP BY B_1, ..., B_n]
