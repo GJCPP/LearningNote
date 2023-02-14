@@ -10,5 +10,8 @@
 	- 属性划分
 		- 1. 标识符 (Identifier)
 			- 即ID，是属性的集合(set of attributes)
+			- 不同实体的ID一定不同
 			- 可能有多个，但有（由设计者指定的）主标识符 (primary ID)
--
+		- 2. 描述符 (Descriptor)
+			- 非ID的属性，用以描述实体或联系
+		-
