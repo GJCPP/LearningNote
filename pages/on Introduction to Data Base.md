@@ -118,6 +118,7 @@
 				- $R/S = \pi_{A_1, ..., A_n}(R)-\pi_{A_1, ..., A_n}(\pi_{A_1, ..., A_n}(R)\times S- R)$
 			- ![image.png](../assets/image_1676364872293_0.png){:height 325, :width 433}
 - 关系演算（基于谓词）
+  collapsed:: true
 	- 成真指派/成假指派
 		- 成真指派：将变元取值$(v_1, ..., v_n)$代入谓词$P(x_1, ..., x_n)$能使之为真
 		  否则称$(v_1, ..., v_n)$是谓词$P$的一个成假指派。
@@ -164,16 +165,20 @@
 		- ![image.png](../assets/image_1676370637344_0.png){:height 288, :width 518}
 		- 更多的示例去看自己的作业
 - SQL: Structed Query Language
+  collapsed:: true
 	- 术语
+	  collapsed:: true
 		- 基表 (base table)，即关系数据库中的关系；即表。
 		- 视图 (view)，即关系子模式，也称虚表
 		- 列：属性
 		- 行：元组
 	- 基本规范
+	  collapsed:: true
 		- 语句由动词开始，分号结束
 		- 使用西文，不区分大小写
 		- 数值常量不需要定界符，但字符串、日期等需要单引号标记
 	- 数据操纵
+	  collapsed:: true
 		- 总的命令格式
 			- SELECT [DISTINCT] column name list, expression
 			  FROM R
@@ -268,6 +273,7 @@
 				- 关于上面那个S4-hard问题的骚操作
 					- ![FEF85B3468FDE1C1059322BD005AE876.png](../assets/FEF85B3468FDE1C1059322BD005AE876_1676377805115_0.png){:height 299, :width 535}
 	- 统计功能
+	  collapsed:: true
 		- COUNT
 			- COUNT(*) 返回元组个数
 			- COUNT(col_name) 返回该列非空元素个数
@@ -286,6 +292,7 @@
 			- ![image.png](../assets/image_1676378424232_0.png){:height 433, :width 526}
 			-
 	- 分组查询
+	  collapsed:: true
 		- 难说，直接看例子罢
 		- ![26DA4B2F2FD8CFDE147F73518489BE43.png](../assets/26DA4B2F2FD8CFDE147F73518489BE43_1676378688292_0.png){:height 208, :width 719}
 		- **GROUP BY的属性一定要全部出现在SELECT中，否则非法**
@@ -295,6 +302,7 @@
 		- GROUP BY会自动分组，依次按照给入的列名为第一二三关键字、升序
 			- 我劝你还是老实写ORDER BY（笑）
 	- 模拟关系代数除法
+	  collapsed:: true
 		- 蛮难说的
 		- 总之，最外层枚举所有的想要的对象A，内一层枚举除数的元组，最内层枚举被除数的元组
 		- 内层试图找到一个除数的元组B，使得(A,B)不在被除数中
@@ -305,6 +313,7 @@
 		- ![image.png](../assets/image_1676381050338_0.png){:height 289, :width 461}
 		- ![image.png](../assets/image_1676382109418_0.png){:height 324, :width 458}
 	- 元组删除、插入、修改
+	  collapsed:: true
 		- 这个可能不是重点，也可能不是考点；但是也比较简单
 		- 删除
 			- DELETE FROM table_name
@@ -329,6 +338,7 @@
 			- ![image.png](../assets/image_1676382484035_0.png){:height 207, :width 463}
 			-
 	- 视图（view）
+	  collapsed:: true
 		- 又是不知道考不考的东西？
 		- 视图就是“只看你想看的”，from certain point of "view"
 		- 创建
@@ -349,5 +359,6 @@
 		- ![image.png](../assets/image_1676382997937_0.png){:height 141, :width 479}
 		- ![image.png](../assets/image_1676383296998_0.png){:height 333, :width 477}
 		- ![image.png](../assets/image_1676383319353_0.png){:height 338, :width 472}
-			- 因为这一操作会让12+4>15，从而导致一行跑出视图外，因此被拒绝。
+		  collapsed:: true
+			- 这一操作会让12+4>15，从而导致一行跑出视图外，因此被拒绝。
 -
