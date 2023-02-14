@@ -134,6 +134,6 @@
 			- 3. $u(i)\ \theta\ a$，其中$a$为常数
 		- 关系演算公式为如下之一
 			- 1. 原子公式
-			- 2. $\varphi_1 \wedge\varphi_2$, $\varphi_1 \vee\varphi_2$, $\varphi_1 \imply\varphi_2$, $\not \varphi_1$
+			- 2. $\varphi_1 \wedge\varphi_2$, $\varphi_1 \vee\varphi_2$, $\varphi_1 \to\varphi_2$, $\neg \varphi_1$, 其中各
 			-
 -
