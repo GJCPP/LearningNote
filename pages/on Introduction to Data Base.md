@@ -144,7 +144,8 @@
 		- 域关系演算 -> 使用$R(x_1, ..., x_n)$，显式列出所有变量
 		- $R\cup S=R(p) \vee S(p)$
 			- 也可严谨的写作$\{p\ |\ R(p)\wedge S(p) \}$（不过真的有谁会这么做吗？）
-			- 或者$\{$<$x_1, ..., x_n$>$ | R(x_1, ..., x_n)\wedge S(x_\}$
+			- 或者{< $x_1, ..., x_n$ > $ | R(x_1, ..., x_n)\wedge S(x_1, ..., x_n)$}
+			-
 		- $R-S=R(p)\wedge\neg S(p)$
 		- $\sigma_F(R)=R(p)\wedge F$
 			- 如$F=A_1\wedge A_2$，则$R(p)\wedge (p(A_1)=p(A_2))$
