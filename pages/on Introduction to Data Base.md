@@ -144,5 +144,5 @@
 		- **其实应该写**$R\cup S=R(t)\vee S(t)$**的；就是不用显式声明变量或集合。**
 		- $R\times S=R(p)\wedge S(q)$，注意是与操作。
 		- $R\underset{F}{\Join} S=R(p)\wedge S(q)\wedge F$
-		-
+		- $R\Join S=R(x,y)\wedge S(y,z)$，通过（所有的）公共变元来实现自然联接
 -
