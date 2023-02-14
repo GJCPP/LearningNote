@@ -259,6 +259,7 @@
 			- <子查询1> OPERATOR [ALL] <子查询2>
 			- OPERATOR：可选择并交差，UNION / INTERSECT / EXCEPT
 			- ALL：不去重
-			- ![image.png](../assets/image_1676377319601_0.png)
+			-
+			- ![image.png](../assets/image_1676377319601_0.png){:height 162, :width 534}
 			-
 -
