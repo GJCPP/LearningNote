@@ -247,5 +247,7 @@
 			- 例子
 				- ![image.png](../assets/image_1676374119935_0.png){:height 187, :width 512}
 				- ![image.png](../assets/image_1676374146908_0.png){:height 299, :width 512}
+				  collapsed:: true
 					- 这个也可以用联接做。
+				-
 -
