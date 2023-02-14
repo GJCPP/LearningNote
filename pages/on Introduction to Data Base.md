@@ -200,8 +200,10 @@
 				-
 		- 比较谓词
 			- 可以用在WHERE中
-			- BETWEEN ... AND ... 值在两者之间；两者都包含
-			- NOT BETWEEN ... AND ...
+			- [NOT] BETWEEN ... AND ...
+				- 值在两者之间；两者都包含
+				- 例子
+					- ![image.png](../assets/image_1676372971999_0.png){:height 200, :width 513}
 			- [NOT] LIKE
 				- 使用：column [NOT] LIKE val1 [ESCAPE val2]
 				- 低配版正则，用来匹配字符串（字符串记得加单引号）
