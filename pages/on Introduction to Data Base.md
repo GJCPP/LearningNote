@@ -267,5 +267,8 @@
 		- COUNT
 			- COUNT(*) 返回元组个数
 			- COUNT(col_name) 返回该列非空元素个数
-			- COUNT(
+			- COUNT(distinct col_name) 返回该列非空且互不相等元素个数
+		- SUM, AVG, MAX, MIN
+			- 统计所有元组在某列上的值的总和、平均、最大、最小
+			-
 -
