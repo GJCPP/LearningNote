@@ -118,5 +118,6 @@
 				- $R/S = \pi_{A_1, ..., A_n}(R)-\pi_{A_1, ..., A_n}(\pi_{A_1, ..., A_n}(R)\times S- R)$
 			- ![image.png](../assets/image_1676364872293_0.png){:height 325, :width 433}
 - 关系演算（基于谓词）
+	- 成真指派/成假指派
 	-
 -
