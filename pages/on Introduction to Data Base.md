@@ -177,9 +177,11 @@
 		- 总的命令格式
 			- SELECT A_1, ..., A_m
 			  FROM R
-			  WHERE F
+			  [WHERE F]
+			  [GROUP BY ]
 			- SELECT -> 将选中的数据表投影到$\pi_{A_1, ..., A_m}()$
 			- FROM -> 指定访问哪个关系；**若多个（以逗号分隔）则自动作笛卡尔积**
-			- WHERE ->
+			- WHERE -> F为条件，指定选择元组的条件$\sigma_F()$
+		-
 	-
 -
