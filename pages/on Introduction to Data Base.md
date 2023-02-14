@@ -200,7 +200,7 @@
 				-
 		- 比较谓词
 			- 可以用在WHERE中
-			- BETWEEN ... AND ... 值在两者之间
+			- BETWEEN ... AND ... 值在两者之间；两者都包含
 			- NOT BETWEEN ... AND ...
 			- LIKE / NOT LIKE
 				- 使用：column [NOT] LIKE val1 [ESCAPE val2]
@@ -210,5 +210,7 @@
 					- 百分号(%)：匹配任意一个字符串，包括空串
 				- 转义指示字符 val2
 					- 紧跟在val2后的下划线/百分号表示对应字符本身，而不再是通配符
+				- 例子
+					- ![image.png](../assets/image_1676372872532_0.png)
 	-
 -
