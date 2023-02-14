@@ -421,7 +421,8 @@
 			- 主属性集
 				- 由所有关键字中的属性构成的集合
 				- 也就是$\{T\in Head(R): \exists X\subseteq R\ s.t.\ T\in X\wedge X\overset{f}{\to}Head(R)\}$
-				- 也就是$\bigcup_{X\overset{f}{\to}Head(R) X}$
-				-
+				- 也就是$\bigcup_{X\overset{f}{\to}Head(R)}X$
+				- 一个属性是主属性，意味着它是对整体有决定性作用的
+					- 也就是在某个由他集合$X$
 				-
 -
