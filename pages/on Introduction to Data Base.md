@@ -153,10 +153,12 @@
 		- $R\times S=R(p)\wedge S(q)$，注意是与操作。
 		- $R\underset{F}{\Join} S=R(p)\wedge S(q)\wedge F$
 		- $R\Join S=R(x,y)\wedge S(y,z)$，通过（所有的）公共属性/变元来实现自然联接
+		- $R/S=R(x_1, ..., x_n, y_1, ..., y_m)\wedge \forall$
 	- 示例
 		- ![image.png](../assets/image_1676367387810_0.png){:height 151, :width 518}
 		  collapsed:: true
 			- S->学生 || C->课程 || SC->选课记录
+		- ![image.png](../assets/image_1676367449339_0.png){:height 96, :width 512}
 		-
 		- 更多的示例去看自己的作业
 -
