@@ -331,15 +331,18 @@
 	- 视图（view）
 		- 又是不知道考不考的东西？
 		- 视图就是“只看你想看的”，from certain point of "view"
-		- CREATE VIEW view_name [(col_name, ...)]
-		  AS <映像语句> [WITH CHECK OPTION]
-		- <映像语句>就是SELECT那些，上面见了一大堆的那种。
-		- 如果写了"WITH CHECK OPTION"，则在视图上执行更新时，结果必须仍在视图里
-			- 也就是结果不能让视图中的某一元组不见了，**除非是明确的删除**
+		- 创建
+			- CREATE VIEW view_name [(col_name, ...)]
+			  AS <映像语句> [WITH CHECK OPTION]
+			- <映像语句>就是SELECT那些，上面见了一大堆的那种。
+			- 如果写了"WITH CHECK OPTION"，则在视图上执行更新时，结果必须仍在视图里
+				- 也就是结果不能让视图中的某一元组不见了，**除非是明确的删除**
+		- 删除
+			- DROP VIEW view_name
 		- 视图操作
 			- 仅当满足如下条件时，视图可以执行更新操作
 				- 1. 视图的每一行唯一对应了基表的每一行
 				- 2. 视图的每一列唯一对应了基表的每一列
-			-
+			- 这样的视图称为可更新视图(upda
 		- ![image.png](../assets/image_1676382997937_0.png){:height 141, :width 479}
 		-
