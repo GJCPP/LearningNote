@@ -92,5 +92,6 @@
 			- 转换：$R\cap S = R-(R-S)$
 				- 去除$R$中不属于$S$的部分
 			- ![image.png](../assets/image_1676363895843_0.png){:height 137, :width 427}
-		-
+		- 联结运算 (Join)
+			-
 -
