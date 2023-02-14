@@ -94,7 +94,9 @@
 			- ![image.png](../assets/image_1676363895843_0.png){:height 137, :width 427}
 		- 联结运算 (Join)
 			- \theta-联结运算 $R\underset{F}{\Join} S$
-				- 依据关系$F$拼接$R$与$S$中的元组；拼接后
+				- 依据关系$F$拼接$R$与$S$中的元组；拼接后加入新表
 				- 转换：$\sigma_F(R\times S)$
-				-
+				- ![image.png](../assets/image_1676364284223_0.png){:height 299, :width 412}
+			- 自然联接 $R\Join S$
+				- 依据两者同名属性
 -
