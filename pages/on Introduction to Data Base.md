@@ -469,6 +469,8 @@ public:: true
 			- 定义
 				- 设$R(U)\in 1NF$
 				- 若每个函数依赖$X\to Y(Y\nsubseteq X)$，$X$都含$R$的关键字
-				- 则称其满足
+				- 则称其满足BC范式，记$R(U)\in BFNF$.
+			- 含义
+				- 只有关键字能决定非
 		- 第四范式
 -
