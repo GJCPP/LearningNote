@@ -467,6 +467,8 @@ public:: true
 				- 则$Y$应该和$t$拉出去单独建表，而不是在$X$已经能决定$Y$后还要罗嗦一遍$t$.
 		- 巴斯-科德范式 (Boyce-Codd Norm Form)
 			- 定义
-				- 设$R(U)$
+				- 设$R(U)\in 1NF$
+				- 若每个函数依赖$X\to Y(Y\nsubseteq X)$，$X$都含$R$的关键字
+				- 则称其满足
 		- 第四范式
 -
