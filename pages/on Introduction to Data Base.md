@@ -535,4 +535,4 @@ public:: true
 						- 1. $Head(R_1)\cap Head(R_2)\to Head(R_1)$
 						- 2. $Head(R_1)\cap Head(R_2)\to Head(R_2)$
 			- 若以上两个要求均被满足，最高可保证分解到第三范式
--
+		- 分解算法（
