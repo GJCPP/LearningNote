@@ -415,9 +415,10 @@ public:: true
 			- 设$F$是一个依赖的集合，也就是由一堆"X\to Y"组成的集合。
 			- 则记$F\models X\to Y$，倘若$X\to Y$可以经由规则，从$F$中的依赖推导而出。
 			- 则记$F^+ =\{X\to Y: F\models X\to Y\}$
+			-
 		- 属性集闭包
 			- 设$X\subseteq Head(R)$是一个属性集合。
-			- 则$X_F^+=\{A | F\models X\to A\}$。
+			- 则$X_F^+=\{A\ |\ F\models X\to A\}$。
 				- 也就是所有被$X$决定的属性都包括进来了。
 				- 也就是$X$不能再决定自身之外的任何属性了。
 			- 主属性集
@@ -515,5 +516,6 @@ public:: true
 				- 若在关系$R(U)$中，任何非平凡的$X\to\to Y$都意味着$X$包含了关键字
 				- 则称其满足第四范式。
 			- $R(U)\in 4NF\implies R(U)\in BCNF$
-				-
+				- 不证了，爱谁谁吧…
+	-
 -
