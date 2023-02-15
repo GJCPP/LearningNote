@@ -535,4 +535,11 @@ public:: true
 						- 1. $Head(R_1)\cap Head(R_2)\to Head(R_1)$
 						- 2. $Head(R_1)\cap Head(R_2)\to Head(R_2)$
 			- 若以上两个要求均被满足，最高可保证分解到第三范式
-		- 分解算法（
+		- 分解算法（最高可保证到第三范式）
+			- 1. 令$F$为最小函数依赖集
+			- 2. $S\gets \emptyset$
+			- 3. 对每个$X\to Y\in F$
+				- 若$S$中没有满足$X\cup Y\subseteq Head(Z)$的子关系模式$Z$
+				- 则将$X\cup Y$加入$S$中
+				- （此步为依赖保持）
+			-
