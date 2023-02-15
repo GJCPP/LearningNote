@@ -495,8 +495,7 @@ public:: true
 				- 内容
 					- $R(U)\in BCNF\implies R(U)\in 3NF$.
 				- 证明
-					- 根据定义，若$X\overset{f}{\to}t$且$t$是非平凡的，则$X$一定为关键字。
-					- 因此易见$R(U)\in 2NF$
+					- 若有非主属性$t$完全依赖于某个不含自己的非关键字属性$Y$
 					-
 		- 第四范式
 -
