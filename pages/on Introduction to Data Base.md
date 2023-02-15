@@ -465,6 +465,8 @@ public:: true
 				- 如果非主属性$t$传递依赖于关键字$X$.
 				- 假设$X\overset{f}{\to} Y\overset{f}{\to} t$
 				- 则$Y$应该和$t$拉出去单独建表，而不是在$X$已经能决定$Y$后还要罗嗦一遍$t$.
-		-
+		- 巴斯-科德范式 (Boyce-Codd Norm Form)
+			- 定义
+				- 设$R(U)
 		- 第四范式
 -
